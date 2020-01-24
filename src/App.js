@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
+import LandingpageComponent from "./components/LandingComponent";
 
 import {} from "semantic-ui-react";
 
 function App() {
   return (
     <div>
-      Hello world
+      <LandingpageComponent/>
     </div>
   );
 }
