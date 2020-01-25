@@ -8,7 +8,7 @@ import {} from "semantic-ui-react";
 
 function App() {
   return (
-    <div>
+    <div style={{background: '#d9c8b5'}}>
       <LandingpageComponent/>
       <VisitUsComponenet/>
     </div>
