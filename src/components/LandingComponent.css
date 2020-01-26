@@ -4,6 +4,7 @@
   position: absolute;
   top: -5%;
   text-shadow: 0 1px black;
+  width: 100%;
 }
 
 .image {
