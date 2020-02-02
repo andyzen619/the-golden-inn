@@ -3,7 +3,7 @@ import "./App.css";
 
 import LandingpageComponent from "./components/LandingComponent";
 import VisitUsComponenet from "./components/VisitUsComponent";
-import NavBarComponent from "./components/NavbarComponent";
+import NavBarComponent from "./components/Navbar/NavbarComponent";
 
 import {} from "semantic-ui-react";
 
