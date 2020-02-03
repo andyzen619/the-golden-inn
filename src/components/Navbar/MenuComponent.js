@@ -9,7 +9,6 @@ const MenuStyle = {
 const MenuComponent = () => (
   <Modal trigger={<Menu.Item position="left">Menu</Menu.Item>} closeIcon style={MenuStyle}>
     <Modal.Content>
-      {/*TODO: Menu items go under here */}
       <Header content='Menu' />
       <MenuListComponenet/>
     </Modal.Content>

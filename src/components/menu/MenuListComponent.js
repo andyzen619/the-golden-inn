@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from "react";
 import {Accordion, Icon} from 'semantic-ui-react';
 
+import faker from "faker";
+import _ from "lodash";
+
+import DishesComponent from "./DishesComponent";
+
+const source = _.times(5, () => ({
+  title: faker.company.companyName(),
+  description: faker.company.catchPhrase(),
+  image: faker.internet.avatar(),
+  price: faker.finance.amount(0, 100, 2, "$")
+}));
+
 const MenuListComponenet = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -24,7 +36,7 @@ const MenuListComponenet = () => {
         Dishes
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 0}>
-        
+          <DishesComponent/>
       </Accordion.Content>
 
       <Accordion.Title
@@ -48,6 +60,18 @@ const MenuListComponenet = () => {
         Full Course Dinner
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 2}>
+        
+      </Accordion.Content>
+
+      <Accordion.Title
+        active={activeIndex === 3}
+        index={3}
+        onClick={handleClick}
+      >
+        <Icon name="dropdown" />
+        Canadian Dishes
+      </Accordion.Title>
+      <Accordion.Content active={activeIndex === 3}>
         
       </Accordion.Content>
     </Accordion>
