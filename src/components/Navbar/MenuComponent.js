@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Header, Icon, Modal, Menu } from 'semantic-ui-react'
-import MenuSearchComponent from "./MenuSearchComponent"
+import MenuListComponenet from '../menu/MenuListComponent';
 
 const MenuStyle = {
   height: "inherit"
@@ -11,7 +11,7 @@ const MenuComponent = () => (
     <Modal.Content>
       {/*TODO: Menu items go under here */}
       <Header content='Menu' />
-      
+      <MenuListComponenet/>
     </Modal.Content>
     <Modal.Actions>
       {/* <Button color='red'>
