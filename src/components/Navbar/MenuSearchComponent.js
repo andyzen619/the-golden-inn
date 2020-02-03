@@ -42,7 +42,7 @@ export default class SearchExampleStandard extends Component {
         <Grid.Column width={4} style={{position: 'relative', right: "7%"}}>
           <Search
             loading={isLoading}
-            onResultSelect={this.handleResultSelect}
+            // onResultSelect={this.handleResultSelect}
             onSearchChange={_.debounce(this.handleSearchChange, 500, {
               leading: true
             })}
