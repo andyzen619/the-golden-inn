@@ -41,5 +41,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script> 
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCEjL7ZIpn9SUG8raac9BtH18ZONAD_3hc",
+        authDomain: "the-golden-inn-restaurant.firebaseapp.com",
+        databaseURL: "https://the-golden-inn-restaurant.firebaseio.com",
+        projectId: "the-golden-inn-restaurant",
+        storageBucket: "the-golden-inn-restaurant.appspot.com",
+        messagingSenderId: "715148102583",
+        appId: "1:715148102583:web:44e16616ea9feab90ef632"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>

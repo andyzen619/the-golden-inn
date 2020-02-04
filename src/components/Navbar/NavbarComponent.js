@@ -1,9 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Segment } from "semantic-ui-react";
 
 import MobileNavbarComponent from './MobileNavbarComponent';
 
-const NavbarComponent = () => {
+import {MenuContext} from "../context/menu-context";
+
+const NavbarComponent = ({menuItems}) => {
+
+  const context = useContext(MenuContext);
+
+  console.log(context);
+
   return (
     <div>
       <Segment.Group>
