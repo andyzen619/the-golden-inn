@@ -10,6 +10,10 @@ const source = _.times(5, () => ({
   price: faker.finance.amount(0, 100, 2, "$")
 }));
 
+const style = {
+  position: 'relative', right: "8%"
+}
+
 const initialState = { isLoading: false, results: [], value: "" };
 
 export default class SearchExampleStandard extends Component {
@@ -39,7 +43,7 @@ export default class SearchExampleStandard extends Component {
 
     return (
       <Grid>
-        <Grid.Column width={4} style={{position: 'relative', right: "7%"}}>
+        <Grid.Column width={4} style={style}>
           <Search
             loading={isLoading}
             // onResultSelect={this.handleResultSelect}
