@@ -3,26 +3,26 @@ import { Segment, Card, Header, Container } from "semantic-ui-react";
 
 import { MenuContext } from "../../context/menu-context";
 
-const AppetizersComponent = () => {
+const RiceComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getAppetizers = () => {
-    let appetizers = menu.dishes.appetizers;
-    return Object.values(appetizers);
+  const getRice = () => {
+    let Rice = menu.dishes.Rice;
+    return Object.values(Rice);
   };
 
   return (
     <div>
       <Segment.Group>
-        {getAppetizers().map((appetizer) => {
+        {getRice().map((appetizer) => {
           return (
             <Segment key={appetizer.name}>
               <Container>
-                <Header as="h4" floated="right" color="green">
+                <Header as="h5" floated="right" color="green">
                   {appetizer.price}
                 </Header>
                 <div>
-                  <Header as="h5">{appetizer.name}</Header>
+                  <Header as="h4">{appetizer.name}</Header>
                   <Card.Description>
                     {appetizer.description}
                   </Card.Description>
@@ -36,4 +36,4 @@ const AppetizersComponent = () => {
   );
 };
 
-export default AppetizersComponent;
+export default RiceComponent;
