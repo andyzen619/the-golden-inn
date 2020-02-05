@@ -25,9 +25,9 @@ const VisitUsComponent = () => {
       <Header size="medium">Hours of operation</Header>
       <Table basic="very" celled collapsing className='hoursOfOperationsStyle'>
         <Table.Body className='hoursOfOperationsTableBodyStyle'>
-          {daysOfTheWeek.map((day, index) => {
+          {daysOfTheWeek.map(day => {
             return (
-              <Table.Row>
+              <Table.Row key={day.day}>
                 <Table.Cell>
                   <div className='hoursOfOperationCellStyle'>
                     <span>{day.day}</span>

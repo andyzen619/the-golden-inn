@@ -1,21 +1,18 @@
 import React, { useContext, useEffect } from "react";
 import { Segment } from "semantic-ui-react";
 
-import MobileNavbarComponent from './MobileNavbarComponent';
+import MobileNavbarComponent from "./mobile/MobileNavbarComponent";
 
-import {MenuContext} from "../context/menu-context";
+import { MenuContext } from "../context/menu-context";
 
-const NavbarComponent = ({menuItems}) => {
+const NavbarComponent = ({ menuItems }) => {
 
-  const context = useContext(MenuContext);
-
-  console.log(context);
+  const [menu, setMenu] = useContext(MenuContext);
 
   return (
     <div>
       <Segment.Group>
-        
-        <MobileNavbarComponent/>
+        <MobileNavbarComponent menu={menu}/>
 
         {/* <Responsive as={Segment} {...Responsive.onlyTablet}>
           Tablet

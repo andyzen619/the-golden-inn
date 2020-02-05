@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 import firestore from "firebase/firestore";
 
@@ -10,24 +10,26 @@ firebase.initializeApp({
 });
 
 var db = firebase.firestore();
-const menuItems = db
-  .collection("menu-items")
-  .get()
-  .then(querySnapshot => {
-    querySnapshot.forEach(doc => {
-      console.log(doc.data());
-    });
-  });
 
-export const MenuContext = createContext(menuItems);
+const MenuContext = React.createContext([{}, () => {}]);
 
-const MenuItemContextProvider = props => {
-  useEffect(() => {}, []);
+const MenuItemContextProvider = (props) => {
+  const [menu, setMenu] = useState({});
+
+  useEffect(() => {
+    db.collection("menu-items")
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          setMenu(doc.data());
+        });
+      });
+  }, []);
   return (
-    <MenuContext.Provider value={menuItems}>
+    <MenuContext.Provider value={[menu, setMenu]}>
       {props.children}
     </MenuContext.Provider>
   );
 };
 
-export default MenuItemContextProvider;
+export { MenuContext, MenuItemContextProvider };
