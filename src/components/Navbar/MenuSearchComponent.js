@@ -1,7 +1,8 @@
 import _ from "lodash";
 import faker from "faker";
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
+import { MenuContext } from "../context/menu-context";
 
 const source = _.times(5, () => ({
   title: faker.company.companyName(),
@@ -14,9 +15,12 @@ const style = {
   position: 'relative', right: "8%"
 }
 
+// const [menu, setMenu] = useContext(MenuContext);
+
 const initialState = { isLoading: false, results: [], value: "" };
 
 export default class SearchExampleStandard extends Component {
+  
   state = initialState;
 
   handleResultSelect = (e, { result }) =>
