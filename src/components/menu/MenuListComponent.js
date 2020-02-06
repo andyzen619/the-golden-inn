@@ -10,6 +10,7 @@ import ChowMeinComponentComponent from "./dishes/ChowMeinComponent";
 import CantoneseComponentComponent from "./dishes/CantoneseComponent";
 import SoupsComponent from "./dishes/SoupsComponent";
 import CombinationsComponent from "./CombinationsComponent";
+import DinnersComponent from "./FullCourseComponent";
 
 const MenuListComponenet = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -30,10 +31,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Appetizers
+        Special Combination Plates
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 0}>
-        <AppetizersComponent />
+        <CombinationsComponent />
       </Accordion.Content>
 
       <Accordion.Title
@@ -42,10 +43,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Rice
+        Full Court Dinner
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 1}>
-        <RiceComponent/>
+        <DinnersComponent/>
       </Accordion.Content>
 
       <Accordion.Title
@@ -54,10 +55,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Sweet And Sour
+        Appetizers
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 2}>
-        <SweetAndSourComponent/>
+        <AppetizersComponent />
       </Accordion.Content>
 
       <Accordion.Title
@@ -66,10 +67,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Egg Foo Young (grilled)
+        Rice (One size only)
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 3}>
-        <EggFooYoungComponent/>
+        <RiceComponent />
       </Accordion.Content>
 
       <Accordion.Title
@@ -78,10 +79,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Vegetable and Almonds
+        Sweet And Sour
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 4}>
-        <VegtablesAndAlmondsComponent/>
+        <SweetAndSourComponent />
       </Accordion.Content>
 
       <Accordion.Title
@@ -90,10 +91,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Chow Mein (dry noodles)/Chop Suey
+        Egg Foo Young (grilled)
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 5}>
-        <ChowMeinComponentComponent/>
+        <EggFooYoungComponent />
       </Accordion.Content>
 
       <Accordion.Title
@@ -102,10 +103,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Cantonese Style
+        Vegetable and Almonds
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 6}>
-        <CantoneseComponentComponent/>
+        <VegtablesAndAlmondsComponent />
       </Accordion.Content>
 
       <Accordion.Title
@@ -114,10 +115,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Soups
+        Chow Mein (dry noodles)/Chop Suey
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 7}>
-        <SoupsComponent/>
+        <ChowMeinComponentComponent />
       </Accordion.Content>
 
       <Accordion.Title
@@ -126,10 +127,34 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Special Combination Plates
+        Cantonese Style
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 8}>
-        <CombinationsComponent/>
+        <CantoneseComponentComponent />
+      </Accordion.Content>
+
+      <Accordion.Title
+        active={activeIndex === 9}
+        index={9}
+        onClick={handleClick}
+      >
+        <Icon name="dropdown" />
+        Soups
+      </Accordion.Title>
+      <Accordion.Content active={activeIndex === 9}>
+        <SoupsComponent />
+      </Accordion.Content>
+
+      <Accordion.Title
+        active={activeIndex === 10}
+        index={10}
+        onClick={handleClick}
+      >
+        <Icon name="dropdown" />
+        Special Combination Plates
+      </Accordion.Title>
+      <Accordion.Content active={activeIndex === 10}>
+        <CombinationsComponent />
       </Accordion.Content>
     </Accordion>
   );
