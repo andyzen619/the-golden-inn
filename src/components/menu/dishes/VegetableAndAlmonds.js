@@ -1,25 +1,23 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Segment, Card, Header, Container } from "semantic-ui-react";
+import React, { useContext } from "react";
+import { Segment, Card, Header } from "semantic-ui-react";
 
 import { MenuContext } from "../../context/menu-context";
 
-const RiceComponent = () => {
+const VegtablesAndAlmondsComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getRice = () => {
-    if(menu.dishes){
-      let Rice = menu.dishes.Rice;
-      return Object.values(Rice);
-    }
-    else{
-      return []
+  const getVegtablesAndAlmonds = () => {
+    if (menu.dishes) {
+      let VegtablesAndAlmonds = menu.dishes.vA;
+      return Object.values(VegtablesAndAlmonds);
+    } else {
+      return [];
     }
   };
 
   return (
-    <div>
-       <Segment.Group>
-      {getRice().map(dish => {
+    <Segment.Group>
+      {getVegtablesAndAlmonds().map(dish => {
         return (
           <Segment key ={dish.name}>
             <Card.Content>
@@ -33,8 +31,7 @@ const RiceComponent = () => {
         );
       })}
     </Segment.Group>
-    </div>
   );
 };
 
-export default RiceComponent;
+export default VegtablesAndAlmondsComponent;

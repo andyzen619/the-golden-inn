@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Segment, Card, Header, Container } from "semantic-ui-react";
+import React, { useContext } from "react";
+import { Segment, Card, Header } from "semantic-ui-react";
 
 import { MenuContext } from "../../context/menu-context";
-import { app } from "firebase";
 
 const AppetizersComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
@@ -18,15 +17,15 @@ const AppetizersComponent = () => {
 
   return (
     <Segment.Group>
-      {getAppetizers().map(appetizer => {
+      {getAppetizers().map(dish => {
         return (
-          <Segment key ={appetizer.name}>
+          <Segment key ={dish.name}>
             <Card.Content>
-              <Header as="h5" floated="right" color="green">
-                {appetizer.price}
+              <Header as="h3" floated="right" color="green">
+                {dish.price}
               </Header>
-              <Card.Header>{appetizer.name}</Card.Header>
-              {appetizer.description&&<Header size="small">{appetizer.description}</Header>}
+              <Card.Header><Header as="h4">{dish.name}</Header></Card.Header>
+              {dish.description&&<Header as="h5" color='grey'>{dish.description}</Header>}
             </Card.Content>
           </Segment>
         );

@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Segment, Card, Header, Container } from "semantic-ui-react";
 
-import { MenuContext } from "../../context/menu-context";
+import { MenuContext } from "../context/menu-context";
 
-const RiceComponent = () => {
+const CombinationsComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getRice = () => {
-    if(menu.dishes){
-      let Rice = menu.dishes.Rice;
-      return Object.values(Rice);
+  const getCombinations = () => {
+    if(menu.combinations){
+      let Combinations = menu.combinations;
+      return Object.values(Combinations);
     }
     else{
       return []
@@ -19,7 +19,7 @@ const RiceComponent = () => {
   return (
     <div>
        <Segment.Group>
-      {getRice().map(dish => {
+      {getCombinations().map(dish => {
         return (
           <Segment key ={dish.name}>
             <Card.Content>
@@ -37,4 +37,4 @@ const RiceComponent = () => {
   );
 };
 
-export default RiceComponent;
+export default CombinationsComponent;

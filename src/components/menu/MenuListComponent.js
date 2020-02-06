@@ -1,8 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Accordion, Icon } from "semantic-ui-react";
 
 import AppetizersComponent from "./dishes/AppetizersComponent";
 import RiceComponent from "./dishes/RiceComponent";
+import SweetAndSourComponent from "./dishes/Sweet&SourComponent";
+import EggFooYoungComponent from "./dishes/EggFooYoungComponent";
+import VegtablesAndAlmondsComponent from "./dishes/VegetableAndAlmonds";
+import ChowMeinComponentComponent from "./dishes/ChowMeinComponent";
+import CantoneseComponentComponent from "./dishes/CantoneseComponent";
+import SoupsComponent from "./dishes/SoupsComponent";
+import CombinationsComponent from "./CombinationsComponent";
 
 const MenuListComponenet = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -49,7 +56,9 @@ const MenuListComponenet = () => {
         <Icon name="dropdown" />
         Sweet And Sour
       </Accordion.Title>
-      <Accordion.Content active={activeIndex === 2}></Accordion.Content>
+      <Accordion.Content active={activeIndex === 2}>
+        <SweetAndSourComponent/>
+      </Accordion.Content>
 
       <Accordion.Title
         active={activeIndex === 3}
@@ -59,7 +68,9 @@ const MenuListComponenet = () => {
         <Icon name="dropdown" />
         Egg Foo Young (grilled)
       </Accordion.Title>
-      <Accordion.Content active={activeIndex === 3}></Accordion.Content>
+      <Accordion.Content active={activeIndex === 3}>
+        <EggFooYoungComponent/>
+      </Accordion.Content>
 
       <Accordion.Title
         active={activeIndex === 4}
@@ -69,7 +80,9 @@ const MenuListComponenet = () => {
         <Icon name="dropdown" />
         Vegetable and Almonds
       </Accordion.Title>
-      <Accordion.Content active={activeIndex === 4}></Accordion.Content>
+      <Accordion.Content active={activeIndex === 4}>
+        <VegtablesAndAlmondsComponent/>
+      </Accordion.Content>
 
       <Accordion.Title
         active={activeIndex === 5}
@@ -79,7 +92,9 @@ const MenuListComponenet = () => {
         <Icon name="dropdown" />
         Chow Mein (dry noodles)/Chop Suey
       </Accordion.Title>
-      <Accordion.Content active={activeIndex === 5}></Accordion.Content>
+      <Accordion.Content active={activeIndex === 5}>
+        <ChowMeinComponentComponent/>
+      </Accordion.Content>
 
       <Accordion.Title
         active={activeIndex === 6}
@@ -89,7 +104,9 @@ const MenuListComponenet = () => {
         <Icon name="dropdown" />
         Cantonese Style
       </Accordion.Title>
-      <Accordion.Content active={activeIndex === 6}></Accordion.Content>
+      <Accordion.Content active={activeIndex === 6}>
+        <CantoneseComponentComponent/>
+      </Accordion.Content>
 
       <Accordion.Title
         active={activeIndex === 7}
@@ -99,7 +116,9 @@ const MenuListComponenet = () => {
         <Icon name="dropdown" />
         Soups
       </Accordion.Title>
-      <Accordion.Content active={activeIndex === 7}></Accordion.Content>
+      <Accordion.Content active={activeIndex === 7}>
+        <SoupsComponent/>
+      </Accordion.Content>
 
       <Accordion.Title
         active={activeIndex === 8}
@@ -109,7 +128,9 @@ const MenuListComponenet = () => {
         <Icon name="dropdown" />
         Special Combination Plates
       </Accordion.Title>
-      <Accordion.Content active={activeIndex === 8}></Accordion.Content>
+      <Accordion.Content active={activeIndex === 8}>
+        <CombinationsComponent/>
+      </Accordion.Content>
     </Accordion>
   );
 };
