@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./MenuListComponent.css"
 import { Accordion, Icon } from "semantic-ui-react";
 
 import AppetizersComponent from "./dishes/AppetizersComponent";
@@ -24,7 +25,7 @@ const MenuListComponenet = () => {
   };
 
   return (
-    <Accordion fluid styled>
+    <Accordion fluid styled className={"accordian"}>
       <Accordion.Title
         active={activeIndex === 0}
         index={0}
