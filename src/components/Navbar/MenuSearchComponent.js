@@ -22,6 +22,24 @@ const initialState = { isLoading: false, results: [], value: "" };
 export default class SearchExampleStandard extends Component {
   
   state = initialState;
+  static contextType = MenuContext
+
+  getAllDishes = menu => {
+    const allDishes = menu.dishes;
+    const result = [];
+
+    Object.values(allDishes).forEach(value => {
+      Object.values(value).forEach(dish => {
+        const newDishObj = {
+          title: dish.name,
+          description: dish.description,
+          price: dish.price
+        }
+        result.push(newDishObj);
+      });
+    });
+    return result;
+  };
 
   handleResultSelect = (e, { result }) =>
     this.setState({ value: result.title });
@@ -37,13 +55,16 @@ export default class SearchExampleStandard extends Component {
 
       this.setState({
         isLoading: false,
-        results: _.filter(source, isMatch)
+        results: _.filter(this.getAllDishes(this.context[0]), isMatch)
       });
     }, 300);
   };
 
   render() {
     const { isLoading, value, results } = this.state;
+    if(Object.keys(this.context[0]).length > 0){
+      console.log(this.getAllDishes(this.context[0]));
+    }
 
     return (
       <Grid>
