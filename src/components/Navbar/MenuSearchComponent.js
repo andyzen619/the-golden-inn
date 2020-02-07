@@ -12,20 +12,22 @@ const source = _.times(5, () => ({
 }));
 
 const style = {
-  position: 'relative', right: "8%"
-}
+  position: "relative",
+  right: "8%"
+};
 
 // const [menu, setMenu] = useContext(MenuContext);
 
 const initialState = { isLoading: false, results: [], value: "" };
 
 export default class SearchExampleStandard extends Component {
-  
   state = initialState;
-  static contextType = MenuContext
+  static contextType = MenuContext;
 
   getAllDishes = menu => {
     const allDishes = menu.dishes;
+    const allCombinations = menu.combinations;
+    const allDinners = menu.dinners;
     const result = [];
 
     Object.values(allDishes).forEach(value => {
@@ -34,9 +36,25 @@ export default class SearchExampleStandard extends Component {
           title: dish.name,
           description: dish.description,
           price: dish.price
-        }
+        };
         result.push(newDishObj);
       });
+    });
+    Object.values(allCombinations).forEach(dish => {
+      const newDishObj = {
+        title: dish.name,
+        description: dish.description,
+        price: dish.price
+      };
+      result.push(newDishObj);
+    });
+    Object.values(allDinners).forEach(dish => {
+      const newDishObj = {
+        title: dish.name,
+        description: dish.description,
+        price: dish.price
+      };
+      result.push(newDishObj);
     });
     return result;
   };
@@ -62,9 +80,6 @@ export default class SearchExampleStandard extends Component {
 
   render() {
     const { isLoading, value, results } = this.state;
-    if(Object.keys(this.context[0]).length > 0){
-      console.log(this.getAllDishes(this.context[0]));
-    }
 
     return (
       <Grid>
@@ -78,8 +93,7 @@ export default class SearchExampleStandard extends Component {
             results={results}
             value={value}
             {...this.props}
-          >
-          </Search>
+          ></Search>
         </Grid.Column>
       </Grid>
     );

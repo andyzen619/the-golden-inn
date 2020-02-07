@@ -9,7 +9,6 @@ const DinnersComponent = () => {
   const getDinners = () => {
     if(menu.dinners){
       let Dinners = menu.dinners;
-      console.log(Dinners);
       return Object.values(Dinners);
     }
     else{
