@@ -13,7 +13,7 @@ const source = _.times(5, () => ({
 
 const style = {
   position: "relative",
-  right: "8%"
+  right: "15%"
 };
 
 // const [menu, setMenu] = useContext(MenuContext);
@@ -85,6 +85,7 @@ export default class SearchExampleStandard extends Component {
       <Grid>
         <Grid.Column width={4} style={style}>
           <Search
+            aligned={'left'}
             loading={isLoading}
             // onResultSelect={this.handleResultSelect}
             onSearchChange={_.debounce(this.handleSearchChange, 500, {
