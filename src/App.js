@@ -4,6 +4,7 @@ import "./App.css";
 import LandingpageComponent from "./components/LandingComponent";
 import VisitUsComponenet from "./components/VisitUsComponent";
 import NavBarComponent from "./components/Navbar/NavbarComponent";
+import MapComponent from "./components/MapComponent";
 
 
 import {MenuItemContextProvider} from "./components/context/menu-context";
@@ -17,6 +18,7 @@ function App() {
         <NavBarComponent />
         <LandingpageComponent />
         <VisitUsComponenet />
+        <MapComponent/>
       </MenuItemContextProvider>
     </div>
   );
