@@ -19,7 +19,7 @@ const VisitUsComponent = () => {
       <Header size="large" style={{ color: "black" }}>
         VISIT US
       </Header>
-      <Header size="tiny" style={{ color: "grey" }}>
+      <Header size="tiny" style={{ color: "white", fontWeight: '1000', textShadow:'0 1px black'}}>
         155 Main Street West, Picton, Prince Edward, ON, Canada
       </Header>
       <Header size="medium">Hours of operation</Header>
@@ -31,7 +31,7 @@ const VisitUsComponent = () => {
                 <Table.Cell>
                   <div className='hoursOfOperationCellStyle'>
                     <span>{day.day}</span>
-                    <span>{day.hours}</span>
+                    <span style={{color: 'white', fontWeight: 1000, textShadow:'0 1px black'}}>{day.hours}</span>
                   </div>
                 </Table.Cell>
               </Table.Row>
