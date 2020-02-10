@@ -12,6 +12,7 @@ import CantoneseComponentComponent from "./dishes/CantoneseComponent";
 import SoupsComponent from "./dishes/SoupsComponent";
 import CombinationsComponent from "./CombinationsComponent";
 import DinnersComponent from "./FullCourseComponent";
+import CanadianComponent from "./CanadianDishesComponent";
 
 const MenuListComponenet = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -152,10 +153,10 @@ const MenuListComponenet = () => {
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Special Combination Plates
+        Canadian Dishes
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 10}>
-        <CombinationsComponent />
+        <CanadianComponent />
       </Accordion.Content>
     </Accordion>
   );

@@ -7,32 +7,42 @@ const DinnersComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
   const getDinners = () => {
-    if(menu.dinners){
+    if (menu.dinners) {
       let Dinners = menu.dinners;
       return Object.values(Dinners);
-    }
-    else{
-      return []
+    } else {
+      return [];
     }
   };
 
   return (
     <div>
-       <Segment.Group>
-      {getDinners().map(dish => {
-        return (
-          <Segment key ={dish.name}>
-            <Card.Content>
-              <Header as="h3" floated="right" color="green">
-                {dish.price}
-              </Header>
-              <Card.Header><Header as="h4">{dish.name}</Header></Card.Header>
-              {dish.description&&<Header as="h5" color='grey'>{dish.description}</Header>}
-            </Card.Content>
-          </Segment>
-        );
-      })}
-    </Segment.Group>
+      <Segment.Group>
+        {getDinners().map(dish => {
+          return (
+            <Segment key={dish.name}>
+              <Card.Content>
+                <Header
+                  as="h4"
+                  floated="right"
+                  color="green"
+                  style={{ fontWeight: "400" }}
+                >
+                  {dish.price}
+                </Header>
+                <Card.Header>
+                  <Header as="h4">{dish.name}</Header>
+                </Card.Header>
+                {dish.description && (
+                  <Header as="h5" color="grey">
+                    {dish.description}
+                  </Header>
+                )}
+              </Card.Content>
+            </Segment>
+          );
+        })}
+      </Segment.Group>
     </div>
   );
 };
