@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/the-golden-inn/precache-manifest.434de7a475c617645dbf64eefecd6710.js"
+  "/the-golden-inn/precache-manifest.eb0a6340a4e650527998a54370d1c127.js"
 );
 
 self.addEventListener('message', (event) => {
