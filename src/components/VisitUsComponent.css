@@ -16,3 +16,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.hoursFontDay {
+  font-size: 1.15em;
+}

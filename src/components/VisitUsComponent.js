@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header, Table, Image } from "semantic-ui-react";
+import { Header, Table, Button } from "semantic-ui-react";
 import "./VisitUsComponent.css";
 
 const VisitUsComponent = () => {
@@ -22,6 +22,8 @@ const VisitUsComponent = () => {
       <Header size="tiny" style={{ color: "black", fontWeight: '365', textShadow:'0 1px grey'}}>
         155 Main Street West, Picton, Prince Edward, ON, Canada
       </Header>
+      <Header size='medium'>613-476-7056</Header>
+      <Button color='google plus'>Call to place your order</Button>
       <Header size="medium">Hours of operation</Header>
       <Table basic="very" celled collapsing className='hoursOfOperationsStyle'>
         <Table.Body className='hoursOfOperationsTableBodyStyle'>
@@ -30,8 +32,8 @@ const VisitUsComponent = () => {
               <Table.Row key={day.day}>
                 <Table.Cell>
                   <div className='hoursOfOperationCellStyle'>
-                    <span>{day.day}</span>
-                    <span style={{color: 'black', fontWeight: 365, textShadow:'1px 1px grey', fontSize: '.90em'}}>{day.hours}</span>
+                    <span className='hoursFontDay'>{day.day}</span>
+                    <span style={{color: 'black', fontWeight: 365, textShadow:'0 1px grey', fontSize: '1em'}}>{day.hours}</span>
                   </div>
                 </Table.Cell>
               </Table.Row>
