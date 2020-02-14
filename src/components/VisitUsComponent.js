@@ -3,6 +3,8 @@ import React from "react";
 import { Header, Table, Button } from "semantic-ui-react";
 import "./VisitUsComponent.css";
 
+import media from 'react-media';
+
 const VisitUsComponent = () => {
   const daysOfTheWeek = [
     { day: "Mon", hours: "Closed" },
