@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b6ebe525bcce686fe1bdf25f98ec7b3",
+    "revision": "a62d8387016051d133cf0bbe65d60a54",
     "url": "/the-golden-inn/index.html"
   },
   {
-    "revision": "5182280898e4be78865c",
+    "revision": "735f61278835225ab1ee",
     "url": "/the-golden-inn/static/css/main.85804be7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/the-golden-inn/static/js/2.b24bc12b.chunk.js.LICENSE"
   },
   {
-    "revision": "5182280898e4be78865c",
-    "url": "/the-golden-inn/static/js/main.3d39b115.chunk.js"
+    "revision": "735f61278835225ab1ee",
+    "url": "/the-golden-inn/static/js/main.85d0f83f.chunk.js"
   },
   {
     "revision": "4842e015d98c2e16f45d",
