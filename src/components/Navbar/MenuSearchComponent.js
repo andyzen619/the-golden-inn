@@ -4,12 +4,6 @@ import React, { Component, useContext } from "react";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
 
-const source = _.times(5, () => ({
-  title: faker.company.companyName(),
-  description: faker.company.catchPhrase(),
-  // image: faker.internet.avatar(),
-  price: faker.finance.amount(0, 100, 2, "$")
-}));
 
 const style = {
   position: "relative",

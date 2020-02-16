@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
-import firestore from "firebase/firestore";
 
 // Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
