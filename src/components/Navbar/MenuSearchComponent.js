@@ -6,8 +6,7 @@ import { MenuContext } from "../context/menu-context";
 
 
 const style = {
-  position: "relative",
-  right: "15%"
+  position: "relative"
 };
 
 // const [menu, setMenu] = useContext(MenuContext);

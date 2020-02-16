@@ -1,4 +1,4 @@
-import React, { Fragment} from "react";
+import React, { Fragment } from "react";
 import { Responsive, Menu } from "semantic-ui-react";
 import Media from "react-media";
 
@@ -17,7 +17,7 @@ const SmallMobileComponent = () => {
       }}
     >
       <MenuComponent />
-      <MenuSearchComponent />
+      <MenuSearchComponent style={{ right: "100%", position: "relative" }} />
     </Responsive>
   );
 };
@@ -33,13 +33,12 @@ const RegularMobileComponent = () => {
       }}
     >
       <MenuComponent />
-      <MenuSearchComponent />
+      <MenuSearchComponent style={{ right: "100%", position: "relative" }} />
     </Responsive>
   );
 };
 
-const MobileNavBarComponent = (menu) => {
-
+const MobileNavBarComponent = menu => {
   return (
     <Media
       queries={{
@@ -50,7 +49,7 @@ const MobileNavBarComponent = (menu) => {
     >
       {matches => (
         <Fragment>
-          {matches.small && <SmallMobileComponent/>}
+          {matches.small && <SmallMobileComponent />}
           {!matches.small && <RegularMobileComponent />}
         </Fragment>
       )}

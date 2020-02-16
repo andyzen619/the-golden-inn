@@ -6,16 +6,17 @@ import DesktopVisitUsComponent from "../../desktop/DesktopVisitUsComponent";
 const DesktopNavbarComponentStyle = {
   divStyle: {
     background: "#d9c8b5",
-    padding: "3%",
-    fontSize: ".90rem"
+    padding: "1em"
   }
 };
 
 const DesktopNavbarComponent = () => {
-  const {divStyle} = DesktopNavbarComponentStyle;
+  const { divStyle } = DesktopNavbarComponentStyle;
   return (
-    <Responsive as={Menu} {...Responsive.onlyComputer} style = {divStyle}>
-      
+    <Responsive as={Menu} {...Responsive.onlyComputer} style={divStyle} fluid>
+      <Menu.Item position='right'>
+        <MenuSearchComponent />
+      </Menu.Item>
     </Responsive>
   );
 };
