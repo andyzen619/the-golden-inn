@@ -6,7 +6,7 @@ import DesktopVisitUsComponent from "../../desktop/DesktopVisitUsComponent";
 const DesktopNavbarComponentStyle = {
   divStyle: {
     background: "#d9c8b5",
-    padding: "1em"
+    padding: "0 2em"
   }
 };
 
@@ -15,7 +15,7 @@ const DesktopNavbarComponent = () => {
   return (
     <Responsive as={Menu} {...Responsive.onlyComputer} style={divStyle} fluid>
       <Menu.Item position='right'>
-        <MenuSearchComponent />
+        <MenuSearchComponent/>
       </Menu.Item>
     </Responsive>
   );
