@@ -3,8 +3,3 @@
   position: relative;
   text-shadow: 0 1px black;
 }
-
-.image {
-  background-image: url(https://img1.wsimg.com/isteam/stock/107160/:/rs=h:512,m);
-  filter: brightness(75%);
-}
