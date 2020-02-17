@@ -9,16 +9,16 @@ import VisitUsComponenet from "./components/VisitUsComponent";
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
 import DesktopVisitUsComponent from "./components/desktop/DesktopVisitUsComponent";
+import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
 
 import { MenuItemContextProvider } from "./components/context/menu-context";
 
 const AppStyle = {
   backgroundColor: { background: "#d9c8b5" }
-}
+};
 
 const HomepageComponent = props => {
-
-  const {backgroundColor} = AppStyle; 
+  const { backgroundColor } = AppStyle;
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
       {matches => (
@@ -44,22 +44,22 @@ const HomepageComponent = props => {
 
 function App() {
   return (
-    <Router>
-      <div>
+    <Router style={AppStyle.backgroundColor}>
+      <div style={AppStyle.backgroundColor}>
         <MenuItemContextProvider>
           <NavBarComponent />
+
+          <Switch>
+            <Route exact path="/">
+              <HomepageComponent />
+            </Route>
+
+            <Route exact path="/menu">
+              <DesktopMenuComponent />
+            </Route>
+          </Switch>
         </MenuItemContextProvider>
       </div>
-
-      <Switch>
-        <Route exact path='/'>
-          <HomepageComponent/>
-        </Route>
-
-        <Route exact path='/menu'>
-          <div>Menu</div>
-        </Route>
-      </Switch>
     </Router>
   );
 }
