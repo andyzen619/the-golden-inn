@@ -13,10 +13,15 @@ const DesktopNavbarComponentStyle = {
 const DesktopNavbarComponent = () => {
   const { divStyle } = DesktopNavbarComponentStyle;
   return (
-    <Responsive as={Menu} {...Responsive.onlyComputer} style={divStyle} fluid>
-      <Menu.Item position='right'>
-        <MenuSearchComponent/>
-      </Menu.Item>
+    <Responsive as={Menu} {...Responsive.onlyComputer} style={divStyle} fluid secondary>
+      <Menu.Item name='The Golden Inn'/>
+      <Menu.Menu position="right">
+        <Menu.Item name="Menu">Menu</Menu.Item>
+        <Menu.Item name="About">About Us</Menu.Item>
+        <Menu.Item>
+          <MenuSearchComponent />
+        </Menu.Item>
+      </Menu.Menu>
     </Responsive>
   );
 };

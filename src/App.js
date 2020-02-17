@@ -12,6 +12,7 @@ import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
 import { MenuItemContextProvider } from "./components/context/menu-context";
 
 import {} from "semantic-ui-react";
+import DesktopVisitUsComponent from "./components/desktop/DesktopVisitUsComponent";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               {!matches.mobile && (
                 <div>
                   <DesktopLandingPageComponent />
+                  <DesktopVisitUsComponent/>
                 </div>
               )}
             </Fragment>
