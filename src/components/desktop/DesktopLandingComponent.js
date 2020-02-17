@@ -11,12 +11,14 @@ const LandingComponentStyle = {
   },
   imageStyle: {
     width: "100%",
-    filter: "brightness(55%)"
+    height: '500px',
+    filter: "brightness(55%)",
+    objectFit: 'cover'
   },
   textStyleContainer: {
     position: "relative",
           left: "50%",
-          transform: "translate(-50%, -225%)",
+          transform: "translate(-50%, -125%)",
           padding: "5%"
   },
   textStyle: {

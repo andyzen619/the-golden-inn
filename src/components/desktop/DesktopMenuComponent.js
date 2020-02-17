@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import { Accordion, Sidebar, Icon, Segment, Image, Header} from "semantic-ui-react";
 
 const DesktopMenuComponentStyle = {
-  sidebarContainerStyle : {height: '500px', background:'white'},
+  sidebarContainerStyle : {height: '600px', background:'white'},
   sidebarStyle: {padding: ' 1.4em'}
 }
 
@@ -27,7 +27,8 @@ const DesktopMenuComponent = () => {
         vertical
         visible={true}
         width="wide"
-        style={sidebarStyle}
+       
+        styled
       >
          <Accordion.Title
           active={activeIndex === 0}

@@ -4,7 +4,6 @@ import React, { Component, useContext } from "react";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
 
-
 const style = {
   position: "relative"
 };
@@ -77,17 +76,19 @@ export default class SearchExampleStandard extends Component {
     return (
       <Grid>
         <Grid.Column width={4} style={style}>
-          <Search
-            aligned={'left'}
-            loading={isLoading}
-            // onResultSelect={this.handleResultSelect}
-            onSearchChange={_.debounce(this.handleSearchChange, 500, {
-              leading: true
-            })}
-            results={results}
-            value={value}
-            {...this.props}
-          ></Search>
+          <div>
+            <Search
+              aligned={"left"}
+              loading={isLoading}
+              // onResultSelect={this.handleResultSelect}
+              onSearchChange={_.debounce(this.handleSearchChange, 500, {
+                leading: true
+              })}
+              results={results}
+              value={value}
+              {...this.props}
+            ></Search>
+          </div>
         </Grid.Column>
       </Grid>
     );
