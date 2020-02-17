@@ -8,7 +8,7 @@ const DesktopVisitUsComponentStyle = {
   divStyle: {
     position: "relative",
     bottom: "200px",
-    fontSize: '1.5em'
+    fontSize: "1.5em"
   },
   title: {
     color: "black"
@@ -23,6 +23,11 @@ const DesktopVisitUsComponentStyle = {
     fontWeight: 365,
     textShadow: "0 1px grey",
     fontSize: "1em"
+  },
+  table: {
+    padding: 0,
+    width: "50%",
+    display: "inline-table"
   }
 };
 
@@ -37,17 +42,14 @@ const DesktopVisitUsComponent = () => {
     { day: "Sun", hours: "11:30 a.m. – 09:00 p.m." }
   ];
 
-  const { divStyle, title, hours, address } = DesktopVisitUsComponentStyle;
+  const { divStyle, title, hours, address, table } = DesktopVisitUsComponentStyle;
 
   return (
     <div className="visitUsDivStyle" style={divStyle}>
       <Header size="large" style={title}>
         VISIT US
       </Header>
-      <Header
-        size="tiny"
-        style={address}
-      >
+      <Header size="tiny" style={address}>
         155 Main Street West, Picton, Prince Edward, ON, Canada
       </Header>
       <Header size="medium">613-476-7056</Header>
@@ -55,7 +57,13 @@ const DesktopVisitUsComponent = () => {
         <Button color="google plus">Call to place your order</Button>
       </a>
       <Header size="medium">Hours of operation</Header>
-      <Table basic="very" celled collapsing style={{padding: 0, width: '50%', display: 'inline-table'}} size={'large'}>
+      <Table
+        basic="very"
+        celled
+        collapsing
+        style={table}
+        size={"large"}
+      >
         <Table.Body className="hoursOfOperationsTableBodyStyle">
           {daysOfTheWeek.map(day => {
             return (
@@ -63,11 +71,7 @@ const DesktopVisitUsComponent = () => {
                 <Table.Cell>
                   <div className="hoursOfOperationCellStyle">
                     <span className="hoursFontDay">{day.day}</span>
-                    <span
-                      style={hours}
-                    >
-                      {day.hours}
-                    </span>
+                    <span style={hours}>{day.hours}</span>
                   </div>
                 </Table.Cell>
               </Table.Row>
