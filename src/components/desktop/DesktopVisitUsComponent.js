@@ -2,8 +2,6 @@ import React from "react";
 
 import { Header, Table, Button } from "semantic-ui-react";
 
-import media from "react-media";
-
 const DesktopVisitUsComponentStyle = {
   divStyle: {
     position: "relative",
