@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/the-golden-inn/static/css/main.94d9fa67.chunk.css",
-    "main.js": "/the-golden-inn/static/js/main.5cccef61.chunk.js",
-    "main.js.map": "/the-golden-inn/static/js/main.5cccef61.chunk.js.map",
+    "main.css": "/the-golden-inn/static/css/main.9f9840a2.chunk.css",
+    "main.js": "/the-golden-inn/static/js/main.af0e195f.chunk.js",
+    "main.js.map": "/the-golden-inn/static/js/main.af0e195f.chunk.js.map",
     "runtime-main.js": "/the-golden-inn/static/js/runtime-main.52b24a3e.js",
     "runtime-main.js.map": "/the-golden-inn/static/js/runtime-main.52b24a3e.js.map",
-    "static/js/2.2709ec49.chunk.js": "/the-golden-inn/static/js/2.2709ec49.chunk.js",
-    "static/js/2.2709ec49.chunk.js.map": "/the-golden-inn/static/js/2.2709ec49.chunk.js.map",
+    "static/js/2.c543e9bf.chunk.js": "/the-golden-inn/static/js/2.c543e9bf.chunk.js",
+    "static/js/2.c543e9bf.chunk.js.map": "/the-golden-inn/static/js/2.c543e9bf.chunk.js.map",
     "index.html": "/the-golden-inn/index.html",
-    "precache-manifest.18803b4e05e9c452742a545f81de4140.js": "/the-golden-inn/precache-manifest.18803b4e05e9c452742a545f81de4140.js",
+    "precache-manifest.2dc520b62b2395d4cba8f929494f0ea8.js": "/the-golden-inn/precache-manifest.2dc520b62b2395d4cba8f929494f0ea8.js",
     "service-worker.js": "/the-golden-inn/service-worker.js",
-    "static/css/main.94d9fa67.chunk.css.map": "/the-golden-inn/static/css/main.94d9fa67.chunk.css.map",
-    "static/js/2.2709ec49.chunk.js.LICENSE": "/the-golden-inn/static/js/2.2709ec49.chunk.js.LICENSE"
+    "static/css/main.9f9840a2.chunk.css.map": "/the-golden-inn/static/css/main.9f9840a2.chunk.css.map",
+    "static/js/2.c543e9bf.chunk.js.LICENSE": "/the-golden-inn/static/js/2.c543e9bf.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.52b24a3e.js",
-    "static/js/2.2709ec49.chunk.js",
-    "static/css/main.94d9fa67.chunk.css",
-    "static/js/main.5cccef61.chunk.js"
+    "static/js/2.c543e9bf.chunk.js",
+    "static/css/main.9f9840a2.chunk.css",
+    "static/js/main.af0e195f.chunk.js"
   ]
 }
