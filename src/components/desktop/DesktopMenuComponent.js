@@ -1,22 +1,28 @@
-import React,{useState} from "react";
-import { Accordion, Sidebar, Icon, Segment, Image, Header} from "semantic-ui-react";
+import React, { useState } from "react";
+import {
+  Accordion,
+  Sidebar,
+  Icon,
+  Segment,
+  Image,
+  Header
+} from "semantic-ui-react";
 
 const DesktopMenuComponentStyle = {
-  sidebarContainerStyle : {height: '600px', background:'white'},
-  sidebarStyle: {padding: ' 1.4em'}
-}
+  sidebarContainerStyle: { height: "600px", background: "white" },
+  sidebarStyle: { padding: " 1.4em" }
+};
 
 const DesktopMenuComponent = () => {
-  const {sidebarContainerStyle, sidebarStyle} = DesktopMenuComponentStyle;
+  const { sidebarContainerStyle, sidebarStyle } = DesktopMenuComponentStyle;
   const [activeIndex, setActiveIndeex] = useState(0);
 
   const handleClick = (e, titleProps) => {
-    const { index } = titleProps
-    const newIndex = activeIndex === index ? -1 : index
+    const { index } = titleProps;
+    const newIndex = activeIndex === index ? -1 : index;
 
-    setActiveIndeex( newIndex );
-
-  }
+    setActiveIndeex(newIndex);
+  };
 
   return (
     <Sidebar.Pushable style={sidebarContainerStyle}>
@@ -27,39 +33,44 @@ const DesktopMenuComponent = () => {
         vertical
         visible={true}
         width="wide"
-       
         styled
       >
-         <Accordion.Title
-          active={activeIndex === 0}
-          index={0}
-          onClick={handleClick}
-        >
-          <Icon name='dropdown' />
-          What is a dog?
+        <Accordion.Title>
+          <Icon />
+          Special Combination Plates
         </Accordion.Title>
-        <Accordion.Content active={activeIndex === 0}>
-          <p>
-            A dog is a type of domesticated animal. Known for its loyalty and
-            faithfulness, it can be found as a welcome guest in many households
-            across the world.
-          </p>
-        </Accordion.Content>
+
+        <Accordion.Title>
+          <Icon />
+          Full Course Dinners
+        </Accordion.Title>
 
         <Accordion.Title
           active={activeIndex === 1}
           index={1}
           onClick={handleClick}
         >
-          <Icon name='dropdown' />
-          What kinds of dogs are there?
+          <Icon name="dropdown" />
+          Main Dishes
         </Accordion.Title>
-        <Accordion.Content active={activeIndex === 1}>
-          <p>
-            There are many breeds of dogs. Each breed varies in size and
-            temperament. Owners often select a breed of dog that they find to be
-            compatible with their own lifestyle and desires from a companion.
-          </p>
+        <Accordion.Content active={activeIndex === 1} styled={false}>
+          <Accordion style={{boxShadow: 'none'}}>
+            <Accordion.Title>
+              Soups
+            </Accordion.Title>
+            <Accordion.Title>
+              Appetizers
+            </Accordion.Title>
+            <Accordion.Title>
+              Rice (One size)
+            </Accordion.Title>
+            <Accordion.Title>
+              Egg Foo Young (Grilled)
+            </Accordion.Title>
+            <Accordion.Title>
+              Chow Mein/Chop Suey
+            </Accordion.Title>
+          </Accordion>
         </Accordion.Content>
       </Sidebar>
 
