@@ -13,7 +13,7 @@ import VegetablesAndAlmondsComponent from '../../menu/dishes/VegetableAndAlmonds
 import CantoneseComponent from '../../menu/dishes/CantoneseComponent';
 
 const menuRouteStyle = {
-  menuItemStyle : { paddingLeft: "5%", paddingRight: "350px", height: '450px', overflow: 'auto' }
+  menuItemStyle : { paddingLeft: "50px", paddingRight: "300px", paddingTop: '50px', height: '450px', overflow: 'auto' }
 }
 
 const DesktopMenuRoutesComponent = () => {
@@ -106,7 +106,6 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Canadian Dishes</Header>
         </Segment>
         <div style={menuItemStyle}>
-          
         </div>
       </Route>
       
