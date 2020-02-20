@@ -8,7 +8,7 @@ import SideBarComponent from "../desktop/menu/SidebarComponent";
 import DesktopMenuRouteComponent from './menu/DesktopMenuRoutesComponent';
 
 const DesktopMenuComponentStyle = {
-  sidebarContainerStyle: { height: "600px", background: "white" },
+  sidebarContainerStyle: { height: "600px", background: "url(https://img1.wsimg.com/isteam/stock/107160/:/rs=h:1080)" },
   sidebarStyle: { padding: " 1.4em" }
 };
 
@@ -18,7 +18,7 @@ const DesktopMenuComponent = () => {
   return (
     <Router>
       <Sidebar.Pushable style={sidebarContainerStyle}>
-        <SideBarComponent />
+        <SideBarComponent/>
         <DesktopMenuRouteComponent/>
       </Sidebar.Pushable>
     </Router>

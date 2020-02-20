@@ -24,6 +24,7 @@ const SidebarComponent = () => {
       vertical
       visible={true}
       styled
+      style={{background: '#f0f0f0'}}
     >
       <Link to="/menu/combinations">
         <Accordion.Title>
@@ -48,7 +49,7 @@ const SidebarComponent = () => {
         Main Dishes
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 1} styled={false}>
-        <Accordion style={{ boxShadow: "none" }}>
+        <Accordion style={{ boxShadow: "none", background: '#f0f0f0' }}>
           <Link to="/menu/soups">
             <Accordion.Title>Soups</Accordion.Title>
           </Link>
