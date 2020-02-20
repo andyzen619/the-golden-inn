@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7d6493d89b7fd2e1d3ca566c24902ac",
+    "revision": "bc0ff7c90a0b8bb136e0dff44c600b84",
     "url": "/the-golden-inn/index.html"
   },
   {
