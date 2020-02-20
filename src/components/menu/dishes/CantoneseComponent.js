@@ -22,7 +22,7 @@ const CantoneseComponentComponent = () => {
             <Segment.Group>
               {getCantoneseComponent().map(dish => {
                 return (
-                  <Segment key={dish.name} style={{ padding: "2%" }}>
+              <Segment key={dish.name}>
                     <Card.Content>
                       <Header
                         as="h4"
@@ -50,7 +50,7 @@ const CantoneseComponentComponent = () => {
             <Card.Group>
               {getCantoneseComponent().map(dish => {
                 return (
-                  <Card key={dish.name} style={{ padding: "2%" }}>
+                  <Card key={dish.name}>
                     <Card.Content>
                       <Header
                         as="h4"

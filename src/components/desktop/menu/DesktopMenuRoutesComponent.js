@@ -4,23 +4,28 @@ import { Route } from "react-router-dom";
 import CombinationsComponent from "../../menu/CombinationsComponent";
 import FullcourseComponenet from "../../menu/FullCourseComponent";
 import SoupComponent from "../../menu/dishes/SoupsComponent";
-import AppetizersComponent from '../../menu/dishes/AppetizersComponent'
-import RiceComponent from '../../menu/dishes/RiceComponent';
-import EggFooYoungComponent from '../../menu/dishes/EggFooYoungComponent';
-import ChowMeinComponent from '../../menu/dishes/ChowMeinComponent';
-import SweetAndSourComponent from '../../menu/dishes/Sweet&SourComponent';
-import VegetablesAndAlmondsComponent from '../../menu/dishes/VegetableAndAlmonds'
-import CantoneseComponent from '../../menu/dishes/CantoneseComponent';
-
+import AppetizersComponent from "../../menu/dishes/AppetizersComponent";
+import RiceComponent from "../../menu/dishes/RiceComponent";
+import EggFooYoungComponent from "../../menu/dishes/EggFooYoungComponent";
+import ChowMeinComponent from "../../menu/dishes/ChowMeinComponent";
+import SweetAndSourComponent from "../../menu/dishes/Sweet&SourComponent";
+import VegetablesAndAlmondsComponent from "../../menu/dishes/VegetableAndAlmonds";
+import CantoneseComponent from "../../menu/dishes/CantoneseComponent";
+import CanadianComponent from "../../menu/CanadianDishesComponent";
 const menuRouteStyle = {
-  menuItemStyle : { paddingLeft: "50px", paddingRight: "300px", paddingTop: '50px', height: '450px', overflow: 'auto' }
-}
+  menuItemStyle: {
+    paddingLeft: "50px",
+    paddingRight: "300px",
+    paddingTop: "50px",
+    height: "450px",
+    overflow: "auto"
+  }
+};
 
 const DesktopMenuRoutesComponent = () => {
-
-  const {menuItemStyle} = menuRouteStyle;
+  const { menuItemStyle } = menuRouteStyle;
   return (
-    <Sidebar.Pusher style ={{padding: ' 2% 5%'}}>
+    <Sidebar.Pusher style={{ padding: " 2% 5%" }}>
       <Route path="/menu/combinations">
         <Segment basic>
           <Header as="h3">Special Combinations Plates</Header>
@@ -50,7 +55,7 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Appetizers</Header>
         </Segment>
         <div style={menuItemStyle}>
-          <AppetizersComponent/>
+          <AppetizersComponent />
         </div>
       </Route>
       <Route path="/menu/rice">
@@ -58,7 +63,7 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Rice</Header>
         </Segment>
         <div style={menuItemStyle}>
-          <RiceComponent/>
+          <RiceComponent />
         </div>
       </Route>
       <Route path="/menu/eggFooYoung">
@@ -66,7 +71,7 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Egg Foo Young (Grilled)</Header>
         </Segment>
         <div style={menuItemStyle}>
-          <EggFooYoungComponent/>
+          <EggFooYoungComponent />
         </div>
       </Route>
       <Route path="/menu/chowMein">
@@ -74,7 +79,7 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Chow Mein/Chop Suey</Header>
         </Segment>
         <div style={menuItemStyle}>
-          <ChowMeinComponent/>
+          <ChowMeinComponent />
         </div>
       </Route>
       <Route path="/menu/sweetAndSour">
@@ -82,7 +87,7 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Sweet and Sour</Header>
         </Segment>
         <div style={menuItemStyle}>
-          <SweetAndSourComponent/>
+          <SweetAndSourComponent />
         </div>
       </Route>
       <Route path="/menu/vegtablesAndAlmonds">
@@ -90,7 +95,7 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Vegetables and Almonds</Header>
         </Segment>
         <div style={menuItemStyle}>
-          <VegetablesAndAlmondsComponent/>
+          <VegetablesAndAlmondsComponent />
         </div>
       </Route>
       <Route path="/menu/cantonese">
@@ -98,7 +103,7 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Cantonese Style</Header>
         </Segment>
         <div style={menuItemStyle}>
-          <CantoneseComponent/>
+          <CantoneseComponent />
         </div>
       </Route>
       <Route path="/menu/canadian">
@@ -106,11 +111,9 @@ const DesktopMenuRoutesComponent = () => {
           <Header as="h3">Canadian Dishes</Header>
         </Segment>
         <div style={menuItemStyle}>
+          <CanadianComponent />
         </div>
       </Route>
-      
-      
-      
     </Sidebar.Pusher>
   );
 };
