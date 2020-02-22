@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 
+console.log(process.env.REACT_APP_FIREBASE_PROJECT_ID);
+
 // Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -13,7 +15,6 @@ var db = firebase.firestore();
 const MenuContext = React.createContext([{}, () => {}]);
 
 const MenuItemContextProvider = (props) => {
-  console.log(process.env.REACT_APP_FIREBASE_PROJECT_ID);
   const [menu, setMenu] = useState({});
 
   useEffect(() => {
