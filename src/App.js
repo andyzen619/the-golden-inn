@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Media from "react-media";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import LandingpageComponent from "./components/LandingComponent";
 import DesktopLandingPageComponent from "./components/desktop/DesktopLandingComponent";

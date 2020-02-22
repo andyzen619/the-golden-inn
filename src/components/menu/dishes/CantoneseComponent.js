@@ -1,7 +1,7 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header } from "semantic-ui-react";
+import { Segment, Card, Header, List, Image } from "semantic-ui-react";
 import { MenuContext } from "../../context/menu-context";
-import Media from 'react-media'
+import Media from "react-media";
 const CantoneseComponentComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
@@ -19,10 +19,10 @@ const CantoneseComponentComponent = () => {
       {matches => (
         <Fragment>
           {matches.mobile && (
-            <Segment.Group>
+            <List>
               {getCantoneseComponent().map(dish => {
                 return (
-              <Segment key={dish.name}>
+                  <List.Item key={dish.name}>
                     <Card.Content>
                       <Header
                         as="h4"
@@ -41,13 +41,13 @@ const CantoneseComponentComponent = () => {
                         </Header>
                       )}
                     </Card.Content>
-                  </Segment>
+                  </List.Item>
                 );
               })}
-            </Segment.Group>
+            </List>
           )}
           {!matches.mobile && (
-            <Card.Group>
+            <Card.Group style={{paddingBottom: '50px'}}>
               {getCantoneseComponent().map(dish => {
                 return (
                   <Card key={dish.name}>

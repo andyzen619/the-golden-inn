@@ -17,15 +17,15 @@ const menuRouteStyle = {
     paddingLeft: "50px",
     paddingRight: "300px",
     paddingTop: "50px",
-    height: "450px",
-    overflow: "auto"
+    paddingBottom: '50px',
+    height: "450px"
   }
 };
 
 const DesktopMenuRoutesComponent = () => {
   const { menuItemStyle } = menuRouteStyle;
   return (
-    <Sidebar.Pusher style={{ padding: " 2% 5%" }}>
+    <Sidebar.Pusher style={{ padding: " 2% 5%", overflow: 'auto'}}>
       <Route path="/menu/combinations">
         <Segment basic>
           <Header as="h3">Special Combinations Plates</Header>

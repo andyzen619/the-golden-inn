@@ -1,5 +1,5 @@
 import React, { useState, Fragment, useContext } from "react";
-import { Segment, Card, Header, Container } from "semantic-ui-react";
+import { Segment, Card, Header, Container, List, Item } from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
 import Media from "react-media";
 
@@ -20,10 +20,10 @@ const CombinationsComponent = () => {
       {matches => (
         <Fragment>
           {matches.mobile && (
-            <Segment.Group>
+            <List>
               {getCombinations().map(dish => {
                 return (
-                  <Segment key={dish.name}>
+                  <List.Item key={dish.name}>
                     <Card.Content>
                       <Header
                         as="h4"
@@ -42,10 +42,10 @@ const CombinationsComponent = () => {
                         </Header>
                       )}
                     </Card.Content>
-                  </Segment>
+                  </List.Item>
                 );
               })}
-            </Segment.Group>
+            </List>
           )}
           {!matches.mobile && (
             <Card.Group>

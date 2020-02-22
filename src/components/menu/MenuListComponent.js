@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./MenuListComponent.css"
-import { Accordion, Icon } from "semantic-ui-react";
+import { Accordion, Icon, Header } from "semantic-ui-react";
 
 import AppetizersComponent from "./dishes/AppetizersComponent";
 import RiceComponent from "./dishes/RiceComponent";
@@ -31,6 +31,7 @@ const MenuListComponenet = () => {
         active={activeIndex === 0}
         index={0}
         onClick={handleClick}
+        as={Header}
       >
         <Icon name="dropdown" />
         Special Combination Plates
@@ -43,6 +44,7 @@ const MenuListComponenet = () => {
         active={activeIndex === 1}
         index={1}
         onClick={handleClick}
+        as={Header}
       >
         <Icon name="dropdown" />
         Full Court Dinner
@@ -55,6 +57,7 @@ const MenuListComponenet = () => {
         active={activeIndex === 2}
         index={2}
         onClick={handleClick}
+        as={Header}
       >
         <Icon name="dropdown" />
         Appetizers
@@ -67,6 +70,7 @@ const MenuListComponenet = () => {
         active={activeIndex === 3}
         index={3}
         onClick={handleClick}
+        as={Header}
       >
         <Icon name="dropdown" />
         Rice (One size only)
@@ -79,6 +83,7 @@ const MenuListComponenet = () => {
         active={activeIndex === 4}
         index={4}
         onClick={handleClick}
+        as={Header}
       >
         <Icon name="dropdown" />
         Sweet And Sour
@@ -91,6 +96,7 @@ const MenuListComponenet = () => {
         active={activeIndex === 5}
         index={5}
         onClick={handleClick}
+        as={Header}
       >
         <Icon name="dropdown" />
         Egg Foo Young (grilled)
@@ -101,6 +107,7 @@ const MenuListComponenet = () => {
 
       <Accordion.Title
         active={activeIndex === 6}
+        as={Header}
         index={6}
         onClick={handleClick}
       >
@@ -113,11 +120,12 @@ const MenuListComponenet = () => {
 
       <Accordion.Title
         active={activeIndex === 7}
+        as={Header}
         index={7}
         onClick={handleClick}
       >
         <Icon name="dropdown" />
-        Chow Mein (dry noodles)/Chop Suey
+        Chow Mein/Chop Suey
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 7}>
         <ChowMeinComponentComponent />
@@ -125,8 +133,10 @@ const MenuListComponenet = () => {
 
       <Accordion.Title
         active={activeIndex === 8}
+        as={Header}
         index={8}
         onClick={handleClick}
+        as={Header}
       >
         <Icon name="dropdown" />
         Cantonese Style
@@ -137,6 +147,7 @@ const MenuListComponenet = () => {
 
       <Accordion.Title
         active={activeIndex === 9}
+        as={Header}
         index={9}
         onClick={handleClick}
       >
@@ -149,6 +160,7 @@ const MenuListComponenet = () => {
 
       <Accordion.Title
         active={activeIndex === 10}
+        as={Header}
         index={10}
         onClick={handleClick}
       >
