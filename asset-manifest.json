@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/the-golden-inn/static/css/main.f79d725f.chunk.css",
-    "main.js": "/the-golden-inn/static/js/main.0701c2c9.chunk.js",
-    "main.js.map": "/the-golden-inn/static/js/main.0701c2c9.chunk.js.map",
+    "main.js": "/the-golden-inn/static/js/main.945dcd61.chunk.js",
+    "main.js.map": "/the-golden-inn/static/js/main.945dcd61.chunk.js.map",
     "runtime-main.js": "/the-golden-inn/static/js/runtime-main.52b24a3e.js",
     "runtime-main.js.map": "/the-golden-inn/static/js/runtime-main.52b24a3e.js.map",
-    "static/js/2.42fe48e6.chunk.js": "/the-golden-inn/static/js/2.42fe48e6.chunk.js",
-    "static/js/2.42fe48e6.chunk.js.map": "/the-golden-inn/static/js/2.42fe48e6.chunk.js.map",
+    "static/js/2.ee4b7a1d.chunk.js": "/the-golden-inn/static/js/2.ee4b7a1d.chunk.js",
+    "static/js/2.ee4b7a1d.chunk.js.map": "/the-golden-inn/static/js/2.ee4b7a1d.chunk.js.map",
     "index.html": "/the-golden-inn/index.html",
-    "precache-manifest.d8a7a7b8abe598ca88358d4124a00f0f.js": "/the-golden-inn/precache-manifest.d8a7a7b8abe598ca88358d4124a00f0f.js",
+    "precache-manifest.ff2b2e97d8264594c584c9a813ac67aa.js": "/the-golden-inn/precache-manifest.ff2b2e97d8264594c584c9a813ac67aa.js",
     "service-worker.js": "/the-golden-inn/service-worker.js",
     "static/css/main.f79d725f.chunk.css.map": "/the-golden-inn/static/css/main.f79d725f.chunk.css.map",
-    "static/js/2.42fe48e6.chunk.js.LICENSE": "/the-golden-inn/static/js/2.42fe48e6.chunk.js.LICENSE"
+    "static/js/2.ee4b7a1d.chunk.js.LICENSE": "/the-golden-inn/static/js/2.ee4b7a1d.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.52b24a3e.js",
-    "static/js/2.42fe48e6.chunk.js",
+    "static/js/2.ee4b7a1d.chunk.js",
     "static/css/main.f79d725f.chunk.css",
-    "static/js/main.0701c2c9.chunk.js"
+    "static/js/main.945dcd61.chunk.js"
   ]
 }
