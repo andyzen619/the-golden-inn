@@ -1,5 +1,12 @@
 import React, { useState, Fragment, useContext } from "react";
-import { Segment, Card, Header, Container, List, Item } from "semantic-ui-react";
+import {
+  Segment,
+  Card,
+  Header,
+  Container,
+  List,
+  Item
+} from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
 import Media from "react-media";
 
@@ -37,9 +44,11 @@ const CombinationsComponent = () => {
                         <Header as="h4">{dish.name}</Header>
                       </Card.Header>
                       {dish.description && (
-                        <Header as="h5" color="grey">
-                          {dish.description}
-                        </Header>
+                        <Card.Description>
+                          <Header as="h5" color="grey">
+                            {dish.description}
+                          </Header>
+                        </Card.Description>
                       )}
                     </Card.Content>
                   </List.Item>

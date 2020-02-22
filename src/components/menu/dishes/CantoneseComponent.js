@@ -36,9 +36,11 @@ const CantoneseComponentComponent = () => {
                         <Header as="h4">{dish.name}</Header>
                       </Card.Header>
                       {dish.description && (
-                        <Header as="h5" color="grey">
-                          {dish.description}
-                        </Header>
+                        <Card.Description>
+                          <Header as="h5" color="grey">
+                            {dish.description}
+                          </Header>
+                        </Card.Description>
                       )}
                     </Card.Content>
                   </List.Item>
@@ -47,7 +49,7 @@ const CantoneseComponentComponent = () => {
             </List>
           )}
           {!matches.mobile && (
-            <Card.Group style={{paddingBottom: '50px'}}>
+            <Card.Group style={{ paddingBottom: "50px" }}>
               {getCantoneseComponent().map(dish => {
                 return (
                   <Card key={dish.name}>
