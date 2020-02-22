@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Sidebar, Accordion, Icon } from "semantic-ui-react";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SidebarComponentStyle = {
   sidebarStyle: { padding: " 1.4em" }
