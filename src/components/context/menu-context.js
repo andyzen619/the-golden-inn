@@ -13,6 +13,7 @@ var db = firebase.firestore();
 const MenuContext = React.createContext([{}, () => {}]);
 
 const MenuItemContextProvider = (props) => {
+  console.log(process.env.REACT_APP_FIREBASE_PROJECT_ID);
   const [menu, setMenu] = useState({});
 
   useEffect(() => {
