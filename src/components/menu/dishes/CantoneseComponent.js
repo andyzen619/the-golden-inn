@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from "react";
-import { Card, Header, List, Image } from "semantic-ui-react";
+import { Card, Header, List } from "semantic-ui-react";
 import { MenuContext } from "../../context/menu-context";
 import Media from "react-media";
 const CantoneseComponentComponent = () => {
