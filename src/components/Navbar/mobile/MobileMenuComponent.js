@@ -9,9 +9,9 @@ const MenuStyle = {
 }
 
 const MenuComponent = () => (
-  <Modal trigger={<Menu.Item position="left">Menu</Menu.Item>} closeIcon style={MenuStyle} dimmer='blurring'>
+  <Modal trigger={<Menu.Item position="left"><Header>Menu</Header></Menu.Item>} closeIcon style={MenuStyle} >
     <Modal.Content style={{maxHeight: 'calc(100vh - 10em)', overflow: 'auto'}}>
-      <Header content='Menu' />
+      <Header as='h2' content='Menu' />
       <MenuListComponenet/>
     </Modal.Content>
   </Modal>
