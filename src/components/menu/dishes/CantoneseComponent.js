@@ -39,7 +39,6 @@ const CantoneseComponentComponent = () => {
                       <Card.Header
                         style={{
                           position: "relative",
-                          right: "15px",
                           bottom: "25px"
                         }}
                       >
@@ -53,8 +52,9 @@ const CantoneseComponentComponent = () => {
                             />
                           }
                           hideOnScroll
+                          flowing
                         >
-                          <Image src={dish.image} size="medium"/>
+                          <Image src={dish.image} size="medium" rounded />
                         </Popup>
                         <Header as="h4">{dish.name}</Header>
                       </Card.Header>
