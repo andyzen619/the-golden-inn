@@ -1,5 +1,5 @@
 import React from "react";
-import { Responsive, Menu, Header } from "semantic-ui-react";
+import { Responsive, Menu, Header, Image } from "semantic-ui-react";
 import MenuSearchComponent from "../MenuSearchComponent";
 
 import { Link } from "react-router-dom";
@@ -21,14 +21,20 @@ const DesktopNavbarComponent = () => {
       fluid
       secondary
     >
-      <Menu.Item>
-        <Link to='/'>
-          <Header>The Golden Inn</Header>
+      <Menu.Item style={{position: 'absolute', top: "5%", zIndex: "10"}}>
+        <Link to="/">
+          <Image size="small" src="https://i.imgur.com/7SBSyFL.png" />
         </Link>
       </Menu.Item>
+      {/* <Menu.Item>
+        <Link to="/">
+          <Image size="tiny" src="https://i.imgur.com/wTWZiYT.png" />
+        </Link>
+      </Menu.Item> */}
+
       <Menu.Menu position="right">
         <Menu.Item name="Menu">
-          <Link to='/menu'>
+          <Link to="/menu">
             <Header as="h4">Menu</Header>
           </Link>
         </Menu.Item>
