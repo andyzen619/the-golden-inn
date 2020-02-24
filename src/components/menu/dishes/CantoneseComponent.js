@@ -19,7 +19,7 @@ const CantoneseComponentComponent = () => {
       {matches => (
         <Fragment>
           {matches.mobile && (
-            <List>
+            <List style={{position: 'relative', top: '15px'}}>
               {getCantoneseComponent().map(dish => {
                 return (
                   <List.Item key={dish.name} style={{ paddingTop: "5%" }}>
@@ -39,6 +39,7 @@ const CantoneseComponentComponent = () => {
                       <Card.Header
                         style={{
                           position: "relative",
+                          right: '15px',
                           bottom: "25px"
                         }}
                       >

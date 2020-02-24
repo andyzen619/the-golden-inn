@@ -44,12 +44,20 @@ const CombinationsComponent = () => {
                           bottom: "25px"
                         }}
                       >
-                        <Image
-                          avatar={true}
-                          src={dish.image}
-                          size="tiny"
-                          floated="left"
-                        />
+                        <Popup
+                          trigger={
+                            <Image
+                              avatar={true}
+                              src={dish.image}
+                              size="tiny"
+                              floated="left"
+                            />
+                          }
+                          hideOnScroll
+                          flowing
+                        >
+                          <Image src={dish.image} size="medium" rounded />
+                        </Popup>
                         <Header as="h4">{dish.name}</Header>
                       </Card.Header>
                       {dish.description && (
