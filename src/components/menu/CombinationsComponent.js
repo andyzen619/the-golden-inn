@@ -40,24 +40,16 @@ const CombinationsComponent = () => {
                       <Card.Header
                         style={{
                           position: "relative",
-                          right: "0",
+                          right: "15px",
                           bottom: "25px"
                         }}
                       >
-                        <Popup
-                          trigger={
-                            <Image
-                              avatar={true}
-                              src={dish.image}
-                              size="tiny"
-                              floated="left"
-                            />
-                          }
-                          hideOnScroll
-                          flowing
-                        >
-                          <Image src={dish.image} size="medium" rounded />
-                        </Popup>
+                        <Image
+                          avatar={true}
+                          src={dish.image}
+                          size="tiny"
+                          floated="left"
+                        />
                         <Header as="h4">{dish.name}</Header>
                       </Card.Header>
                       {dish.description && (

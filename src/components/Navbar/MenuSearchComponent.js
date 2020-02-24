@@ -1,7 +1,7 @@
 import _ from "lodash";
 import faker from "faker";
 import React, { Component, useContext } from "react";
-import { Search, Grid, Header, Segment } from "semantic-ui-react";
+import { Search, Grid, Header, Segment, Card, Image } from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
 
 const style = {
@@ -36,7 +36,8 @@ export default class SearchExampleStandard extends Component {
       const newDishObj = {
         title: dish.name,
         description: dish.description,
-        price: dish.price
+        price: dish.price,
+        image: dish.image
       };
       result.push(newDishObj);
     });
@@ -69,7 +70,6 @@ export default class SearchExampleStandard extends Component {
       });
     }, 300);
   };
-
   render() {
     const { isLoading, value, results } = this.state;
 
