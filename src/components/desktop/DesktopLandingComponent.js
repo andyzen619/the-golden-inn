@@ -8,7 +8,7 @@ const LandingComponentStyle = {
     textAlign: "center",
     position: "relative",
     textShadow: "0 1px black",
-    height: '700px'
+    height: '500px'
   },
   imageStyle: {
     width: "100%",

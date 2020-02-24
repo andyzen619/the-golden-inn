@@ -5,8 +5,7 @@ import { Header, Table, Button } from "semantic-ui-react";
 const DesktopVisitUsComponentStyle = {
   divStyle: {
     position: "relative",
-    bottom: "200px",
-    fontSize: "1.5em"
+    fontSize: "1.5em",
   },
   title: {
     color: "black"
