@@ -12,7 +12,6 @@ const SidebarComponent = ({setDefaultFalse}) => {
   const handleClick = (e, titleProps) => {
     const { index } = titleProps;
     const newIndex = activeIndex === index ? -1 : index;
-    setDefaultFalse();
     setActiveIndeex(newIndex);
   };
 
@@ -51,31 +50,31 @@ const SidebarComponent = ({setDefaultFalse}) => {
       <Accordion.Content active={activeIndex === 1} styled={false}>
         <Accordion style={{ boxShadow: "none", background: '#f0f0f0' }}>
           <Link to="/menu/soups">
-            <Accordion.Title>Soups</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Soups</Accordion.Title>
           </Link>
           <Link to="/menu/appetizers">
-            <Accordion.Title>Appetizers</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Appetizers</Accordion.Title>
           </Link>
           <Link to="/menu/rice">
-            <Accordion.Title>Rice (One size)</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Rice (One size)</Accordion.Title>
           </Link>
           <Link to="/menu/eggFooYoung">
-            <Accordion.Title>Egg Foo Young (Grilled)</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Egg Foo Young (Grilled)</Accordion.Title>
           </Link>
           <Link to="/menu/chowMein">
-            <Accordion.Title>Chow Mein/Chop Suey</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Chow Mein/Chop Suey</Accordion.Title>
           </Link>
           <Link to="/menu/sweetAndSour">
-            <Accordion.Title>Sweet and Sour</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Sweet and Sour</Accordion.Title>
           </Link>
           <Link to="/menu/vegtablesAndAlmonds">
-            <Accordion.Title>Vegetables and Almonds</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Vegetables and Almonds</Accordion.Title>
           </Link>
           <Link to="/menu/cantonese">
-            <Accordion.Title>Cantonese Style</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Cantonese Style</Accordion.Title>
           </Link>
           <Link to="/menu/canadian">
-            <Accordion.Title>Canadian Dishes</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Canadian Dishes</Accordion.Title>
           </Link>
         </Accordion>
       </Accordion.Content>
