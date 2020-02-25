@@ -60,7 +60,6 @@ const DesktopMenuComponent = () => {
     <Router>
       <Sidebar.Pushable style={sidebarContainerStyle}>
         <SideBarComponent setDefaultFalse={setDefaultFalse} />
-        {getDefault()}
         <DesktopMenuRouteComponent />
       </Sidebar.Pushable>
     </Router>

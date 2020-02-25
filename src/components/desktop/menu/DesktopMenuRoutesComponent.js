@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Sidebar, Segment, Header } from "semantic-ui-react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CombinationsComponent from "../../menu/CombinationsComponent";
 import FullcourseComponenet from "../../menu/FullCourseComponent";
 import SoupComponent from "../../menu/dishes/SoupsComponent";
@@ -12,7 +12,6 @@ import SweetAndSourComponent from "../../menu/dishes/Sweet&SourComponent";
 import VegetablesAndAlmondsComponent from "../../menu/dishes/VegetableAndAlmonds";
 import CantoneseComponent from "../../menu/dishes/CantoneseComponent";
 import CanadianComponent from "../../menu/CanadianDishesComponent";
-import SidebarComponent from "./SidebarComponent";
 const menuRouteStyle = {
   menuItemStyle: {
     paddingLeft: "50px",
@@ -28,6 +27,14 @@ const DesktopMenuRoutesComponent = () => {
 
   return (
     <Sidebar.Pusher style={{ padding: " 2% 5%", overflow: "auto" }}>
+      <Route exact path="/menu/">
+        <Segment basic>
+          <Header as="h3">Special Combinations Plates</Header>
+        </Segment>
+        <div style={menuItemStyle}>
+          <CombinationsComponent />
+        </div>
+      </Route>
       <Route path="/menu/combinations">
         <Segment basic>
           <Header as="h3">Special Combinations Plates</Header>
