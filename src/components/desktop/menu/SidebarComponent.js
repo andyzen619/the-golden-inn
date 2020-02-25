@@ -6,13 +6,13 @@ const SidebarComponentStyle = {
   sidebarStyle: { padding: " 1.4em" }
 };
 
-const SidebarComponent = () => {
+const SidebarComponent = ({setDefaultFalse}) => {
   const [activeIndex, setActiveIndeex] = useState(0);
 
   const handleClick = (e, titleProps) => {
     const { index } = titleProps;
     const newIndex = activeIndex === index ? -1 : index;
-
+    setDefaultFalse();
     setActiveIndeex(newIndex);
   };
 
@@ -27,14 +27,14 @@ const SidebarComponent = () => {
       style={{background: '#f0f0f0'}}
     >
       <Link to="/menu/combinations">
-        <Accordion.Title>
+        <Accordion.Title onClick={setDefaultFalse}>
           <Icon />
           Special Combination Plates
         </Accordion.Title>
       </Link>
 
       <Link to="/menu/fullcourse">
-        <Accordion.Title>
+        <Accordion.Title onClick={setDefaultFalse}>
           <Icon />
           Full Course Dinners
         </Accordion.Title>
