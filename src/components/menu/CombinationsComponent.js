@@ -1,5 +1,5 @@
 import React, { useState, Fragment, useContext } from "react";
-import { Card, Header, List, Image, Popup } from "semantic-ui-react";
+import { Card, Header, List, Image, Popup, Item } from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
 import Media from "react-media";
 
@@ -80,32 +80,33 @@ const CombinationsComponent = () => {
             </List>
           )}
           {!matches.mobile && (
-            <Card.Group>
+            <Item.Group style={{ background: "white", padding: "5%", boxShadow: '5px 5px 5px 5px black' }} divided>
               {getCombinations().map(dish => {
                 return (
-                  <Card key={dish.name}>
+                  <Item key={dish.name}>
+                    {dish.image && <Image src={dish.image} size="small" />}
                     <Card.Content>
                       <Header
-                        as="h4"
+                        as="h3"
                         floated="right"
                         color="green"
                         style={{ fontWeight: "400" }}
                       >
                         {dish.price}
                       </Header>
-                      <Card.Header>
+                      <Item.Header>
                         <Header as="h4">{dish.name}</Header>
-                      </Card.Header>
+                      </Item.Header>
                       {dish.description && (
-                        <Header as="h5" color="grey">
+                        <Item.Meta>
                           {dish.description}
-                        </Header>
+                        </Item.Meta>
                       )}
                     </Card.Content>
-                  </Card>
+                  </Item>
                 );
               })}
-            </Card.Group>
+            </Item.Group>
           )}
         </Fragment>
       )}
