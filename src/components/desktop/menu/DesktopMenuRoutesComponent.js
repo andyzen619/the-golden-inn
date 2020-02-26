@@ -29,7 +29,7 @@ const DesktopMenuRoutesComponent = () => {
     <Sidebar.Pusher style={{ padding: " 2% 5%", overflow: "auto" }}>
       <Route exact path="/the-golden-inn/menu">
         <Segment basic>
-          <Header as="h3">Special Combinations Plates</Header>
+          <Header as="h1">Special Combinations Plates</Header>
         </Segment>
         <div style={menuItemStyle}>
           <CombinationsComponent />
