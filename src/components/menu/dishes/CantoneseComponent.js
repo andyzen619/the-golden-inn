@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from "react";
-import { Card, Header, List, Image, Popup } from "semantic-ui-react";
+import { Card, Header, List, Image, Popup, Item } from "semantic-ui-react";
 import { MenuContext } from "../../context/menu-context";
 import Media from "react-media";
 const CantoneseComponentComponent = () => {
@@ -19,7 +19,7 @@ const CantoneseComponentComponent = () => {
       {matches => (
         <Fragment>
           {matches.mobile && (
-            <List style={{position: 'relative', top: '15px'}}>
+            <List style={{ position: "relative", top: "15px" }}>
               {getCantoneseComponent().map(dish => {
                 return (
                   <List.Item key={dish.name} style={{ paddingTop: "5%" }}>
@@ -39,7 +39,7 @@ const CantoneseComponentComponent = () => {
                       <Card.Header
                         style={{
                           position: "relative",
-                          right: '15px',
+                          right: "15px",
                           bottom: "25px"
                         }}
                       >
@@ -73,32 +73,38 @@ const CantoneseComponentComponent = () => {
             </List>
           )}
           {!matches.mobile && (
-            <Card.Group style={{ paddingBottom: "50px" }}>
+            <Item.Group
+              style={{
+                background: "white",
+                padding: "5%",
+                boxShadow: "5px 5px 5px 5px black"
+              }}
+              divided
+            >
               {getCantoneseComponent().map(dish => {
                 return (
-                  <Card key={dish.name}>
+                  <Item key={dish.name}>
+                    {dish.image && <Image src={dish.image} size="small" rounded/>}
                     <Card.Content>
                       <Header
-                        as="h4"
+                        as="h3"
                         floated="right"
                         color="green"
                         style={{ fontWeight: "400" }}
                       >
                         {dish.price}
                       </Header>
-                      <Card.Header>
+                      <Item.Header>
                         <Header as="h4">{dish.name}</Header>
-                      </Card.Header>
+                      </Item.Header>
                       {dish.description && (
-                        <Header as="h5" color="grey">
-                          {dish.description}
-                        </Header>
+                        <Item.Meta>{dish.description}</Item.Meta>
                       )}
                     </Card.Content>
-                  </Card>
+                  </Item>
                 );
               })}
-            </Card.Group>
+            </Item.Group>
           )}
         </Fragment>
       )}

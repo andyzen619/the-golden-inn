@@ -1,6 +1,6 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header } from "semantic-ui-react";
-import Media from 'react-media';
+import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
+import Media from "react-media";
 
 import { MenuContext } from "../../context/menu-context";
 
@@ -49,32 +49,38 @@ const EggFooYoungComponent = () => {
             </Segment.Group>
           )}
           {!matches.mobile && (
-            <Card.Group>
+            <Item.Group
+              style={{
+                background: "white",
+                padding: "5%",
+                boxShadow: "5px 5px 5px 5px black"
+              }}
+              divided
+            >
               {getEggFooYoung().map(dish => {
                 return (
-                  <Card key={dish.name}>
+                  <Item key={dish.name}>
+                    {dish.image && <Image src={dish.image} size="small" />}
                     <Card.Content>
                       <Header
-                        as="h4"
+                        as="h3"
                         floated="right"
                         color="green"
                         style={{ fontWeight: "400" }}
                       >
                         {dish.price}
                       </Header>
-                      <Card.Header>
+                      <Item.Header>
                         <Header as="h4">{dish.name}</Header>
-                      </Card.Header>
+                      </Item.Header>
                       {dish.description && (
-                        <Header as="h5" color="grey">
-                          {dish.description}
-                        </Header>
+                        <Item.Meta>{dish.description}</Item.Meta>
                       )}
                     </Card.Content>
-                  </Card>
+                  </Item>
                 );
               })}
-            </Card.Group>
+            </Item.Group>
           )}
         </Fragment>
       )}

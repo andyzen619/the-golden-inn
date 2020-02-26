@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useContext } from "react";
+import React, {Fragment, useContext } from "react";
 import { Card, Header, List, Image, Popup, Item } from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
 import Media from "react-media";
