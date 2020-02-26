@@ -8,7 +8,7 @@ import DesktopMenuRouteComponent from "./menu/DesktopMenuRoutesComponent";
 
 const DesktopMenuComponentStyle = {
   sidebarContainerStyle: {
-    height: "600px",
+    height: "700px",
     background: "url(https://img1.wsimg.com/isteam/stock/107160/:/rs=h:1080)"
   },
   sidebarStyle: { padding: " 1.4em" },
