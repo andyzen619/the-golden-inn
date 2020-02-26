@@ -27,7 +27,7 @@ const DesktopMenuRoutesComponent = () => {
 
   return (
     <Sidebar.Pusher style={{ padding: " 2% 5%", overflow: "auto" }}>
-      <Route exact path="/menu/">
+      <Route exact path="/the-golden-inn/menu">
         <Segment basic>
           <Header as="h3">Special Combinations Plates</Header>
         </Segment>
@@ -35,7 +35,7 @@ const DesktopMenuRoutesComponent = () => {
           <CombinationsComponent />
         </div>
       </Route>
-      <Route path="/menu/combinations">
+      <Route path="/the-golden-inn/menu/combinations">
         <Segment basic>
           <Header as="h1">Special Combinations Plates</Header>
           <Item.Meta>
@@ -47,7 +47,7 @@ const DesktopMenuRoutesComponent = () => {
           <CombinationsComponent />
         </div>
       </Route>
-      <Route path="/menu/fullcourse">
+      <Route path="/the-golden-inn/menu/fullcourse">
         <Segment basic>
           <Header as="h1">Full Course Meals</Header>
           <Item.Meta>
@@ -59,7 +59,7 @@ const DesktopMenuRoutesComponent = () => {
           <FullcourseComponenet />
         </div>
       </Route>
-      <Route path="/menu/soups">
+      <Route path="/the-golden-inn/menu/soups">
         <Segment basic>
           <Header as="h1">Soups</Header>
         </Segment>
@@ -67,7 +67,7 @@ const DesktopMenuRoutesComponent = () => {
           <SoupComponent />
         </div>
       </Route>
-      <Route path="/menu/appetizers">
+      <Route path="/the-golden-inn/menu/appetizers">
         <Segment basic>
           <Header as="h1">Appetizers</Header>
         </Segment>
@@ -75,7 +75,7 @@ const DesktopMenuRoutesComponent = () => {
           <AppetizersComponent />
         </div>
       </Route>
-      <Route path="/menu/rice">
+      <Route path="/the-golden-inn/menu/rice">
         <Segment basic>
           <Header as="h1">Rice (One size only)</Header>
         </Segment>
@@ -83,7 +83,7 @@ const DesktopMenuRoutesComponent = () => {
           <RiceComponent />
         </div>
       </Route>
-      <Route path="/menu/eggFooYoung">
+      <Route path="/the-golden-inn/menu/eggFooYoung">
         <Segment basic>
           <Header as="h1">Egg Foo Young (Grilled)</Header>
         </Segment>
@@ -91,7 +91,7 @@ const DesktopMenuRoutesComponent = () => {
           <EggFooYoungComponent />
         </div>
       </Route>
-      <Route path="/menu/chowMein">
+      <Route path="/the-golden-inn/menu/chowMein">
         <Segment basic>
           <Header as="h1">Chow Mein (Dry noodles)/Chop Suey</Header>
         </Segment>
@@ -99,7 +99,7 @@ const DesktopMenuRoutesComponent = () => {
           <ChowMeinComponent />
         </div>
       </Route>
-      <Route path="/menu/sweetAndSour">
+      <Route path="/the-golden-inn/menu/sweetAndSour">
         <Segment basic>
           <Header as="h1">Sweet and Sour</Header>
         </Segment>
@@ -107,7 +107,7 @@ const DesktopMenuRoutesComponent = () => {
           <SweetAndSourComponent />
         </div>
       </Route>
-      <Route path="/menu/vegtablesAndAlmonds">
+      <Route path="/the-golden-inn/menu/vegtablesAndAlmonds">
         <Segment basic>
           <Header as="h1">Vegetables and Almonds</Header>
         </Segment>
@@ -115,7 +115,7 @@ const DesktopMenuRoutesComponent = () => {
           <VegetablesAndAlmondsComponent />
         </div>
       </Route>
-      <Route path="/menu/cantonese">
+      <Route path="/the-golden-inn/menu/cantonese">
         <Segment basic>
           <Header as="h1">Cantonese Style</Header>
         </Segment>
@@ -123,7 +123,7 @@ const DesktopMenuRoutesComponent = () => {
           <CantoneseComponent />
         </div>
       </Route>
-      <Route path="/menu/canadian">
+      <Route path="/the-golden-inn/menu/canadian">
         <Segment basic>
           <Header as="h1">Canadian Dishes</Header>
         </Segment>
