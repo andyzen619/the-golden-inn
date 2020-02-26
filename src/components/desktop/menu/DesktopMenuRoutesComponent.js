@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Sidebar, Segment, Header } from "semantic-ui-react";
+import { Sidebar, Segment, Header, Item } from "semantic-ui-react";
 import { Route, Switch } from "react-router-dom";
 import CombinationsComponent from "../../menu/CombinationsComponent";
 import FullcourseComponenet from "../../menu/FullCourseComponent";
@@ -37,7 +37,11 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/combinations">
         <Segment basic>
-          <Header as="h3">Special Combinations Plates</Header>
+          <Header as="h1">Special Combinations Plates</Header>
+          <Item.Meta>
+            No substitutions within combinations plates. Get $1 off betwean
+            11:30am-2pm
+          </Item.Meta>
         </Segment>
         <div style={menuItemStyle}>
           <CombinationsComponent />
@@ -45,7 +49,11 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/fullcourse">
         <Segment basic>
-          <Header as="h3">Full Course Meals</Header>
+          <Header as="h1">Full Course Meals</Header>
+          <Item.Meta>
+            Appetizers cannot be substituted. Other substitutions require
+            charge.
+          </Item.Meta>
         </Segment>
         <div style={menuItemStyle}>
           <FullcourseComponenet />
@@ -53,7 +61,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/soups">
         <Segment basic>
-          <Header as="h3">Soups</Header>
+          <Header as="h1">Soups</Header>
         </Segment>
         <div style={menuItemStyle}>
           <SoupComponent />
@@ -61,7 +69,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/appetizers">
         <Segment basic>
-          <Header as="h3">Appetizers</Header>
+          <Header as="h1">Appetizers</Header>
         </Segment>
         <div style={menuItemStyle}>
           <AppetizersComponent />
@@ -69,7 +77,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/rice">
         <Segment basic>
-          <Header as="h3">Rice</Header>
+          <Header as="h1">Rice (One size only)</Header>
         </Segment>
         <div style={menuItemStyle}>
           <RiceComponent />
@@ -77,7 +85,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/eggFooYoung">
         <Segment basic>
-          <Header as="h3">Egg Foo Young (Grilled)</Header>
+          <Header as="h1">Egg Foo Young (Grilled)</Header>
         </Segment>
         <div style={menuItemStyle}>
           <EggFooYoungComponent />
@@ -85,7 +93,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/chowMein">
         <Segment basic>
-          <Header as="h3">Chow Mein/Chop Suey</Header>
+          <Header as="h1">Chow Mein (Dry noodles)/Chop Suey</Header>
         </Segment>
         <div style={menuItemStyle}>
           <ChowMeinComponent />
@@ -93,7 +101,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/sweetAndSour">
         <Segment basic>
-          <Header as="h3">Sweet and Sour</Header>
+          <Header as="h1">Sweet and Sour</Header>
         </Segment>
         <div style={menuItemStyle}>
           <SweetAndSourComponent />
@@ -101,7 +109,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/vegtablesAndAlmonds">
         <Segment basic>
-          <Header as="h3">Vegetables and Almonds</Header>
+          <Header as="h1">Vegetables and Almonds</Header>
         </Segment>
         <div style={menuItemStyle}>
           <VegetablesAndAlmondsComponent />
@@ -109,7 +117,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/cantonese">
         <Segment basic>
-          <Header as="h3">Cantonese Style</Header>
+          <Header as="h1">Cantonese Style</Header>
         </Segment>
         <div style={menuItemStyle}>
           <CantoneseComponent />
@@ -117,7 +125,7 @@ const DesktopMenuRoutesComponent = () => {
       </Route>
       <Route path="/menu/canadian">
         <Segment basic>
-          <Header as="h3">Canadian Dishes</Header>
+          <Header as="h1">Canadian Dishes</Header>
         </Segment>
         <div style={menuItemStyle}>
           <CanadianComponent />

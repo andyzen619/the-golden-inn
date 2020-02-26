@@ -62,7 +62,7 @@ const SidebarComponent = ({setDefaultFalse}) => {
             <Accordion.Title onClick={setDefaultFalse}>Egg Foo Young (Grilled)</Accordion.Title>
           </Link>
           <Link to="/menu/chowMein">
-            <Accordion.Title onClick={setDefaultFalse}>Chow Mein/Chop Suey</Accordion.Title>
+            <Accordion.Title onClick={setDefaultFalse}>Chow Mein (Dry noodles)/Chop Suey</Accordion.Title>
           </Link>
           <Link to="/menu/sweetAndSour">
             <Accordion.Title onClick={setDefaultFalse}>Sweet and Sour</Accordion.Title>
