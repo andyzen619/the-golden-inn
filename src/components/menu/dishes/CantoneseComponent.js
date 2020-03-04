@@ -38,7 +38,7 @@ const CantoneseComponentComponent = () => {
                             src={dish.image}
                             floated="right"
                             rounded
-                            style={{width: '60px'}}
+                            style={{ width: "60px" }}
                           />
                         }
                         hideOnScroll
@@ -92,14 +92,6 @@ const CantoneseComponentComponent = () => {
               {getCantoneseComponent().map(dish => {
                 return (
                   <Item key={dish.name}>
-                    {dish.image && (
-                      <Image
-                        src={dish.image}
-                        size="small"
-                        rounded="true"
-                        style={{ maxHeight: "150px" }}
-                      />
-                    )}
                     <Card.Content>
                       <Header
                         as="h3"
@@ -116,6 +108,14 @@ const CantoneseComponentComponent = () => {
                         <Item.Meta>{dish.description}</Item.Meta>
                       )}
                     </Card.Content>
+                    {dish.image && (
+                      <Image
+                        src={dish.image}
+                        size="small"
+                        rounded="true"
+                        style={{ maxHeight: "150px", paddingLeft: '10px' }}
+                      />
+                    )}
                   </Item>
                 );
               })}

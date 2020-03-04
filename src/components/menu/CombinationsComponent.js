@@ -90,13 +90,6 @@ const CombinationsComponent = () => {
               {getCombinations().map(dish => {
                 return (
                   <Item key={dish.name}>
-                    {dish.image && (
-                      <Image
-                        src={dish.image}
-                        size="small"
-                        style={{ maxHeight: "150px" }}
-                      />
-                    )}
                     <Card.Content>
                       <Header
                         as="h3"
@@ -113,6 +106,13 @@ const CombinationsComponent = () => {
                         <Item.Meta>{dish.description}</Item.Meta>
                       )}
                     </Card.Content>
+                    {dish.image && (
+                      <Image
+                        src={dish.image}
+                        size="small"
+                        style={{ maxHeight: "150px", paddingLeft: '10px' }}
+                      />
+                    )}
                   </Item>
                 );
               })}
