@@ -1,5 +1,13 @@
 import React, { useContext, Fragment } from "react";
-import { Card, Header, List, Image, Popup, Item } from "semantic-ui-react";
+import {
+  Card,
+  Header,
+  List,
+  Image,
+  Popup,
+  Item,
+  Segment
+} from "semantic-ui-react";
 import { MenuContext } from "../../context/menu-context";
 import Media from "react-media";
 const CantoneseComponentComponent = () => {
@@ -19,58 +27,58 @@ const CantoneseComponentComponent = () => {
       {matches => (
         <Fragment>
           {matches.mobile && (
-            <List style={{ position: "relative", top: "15px" }}>
+            <Segment.Group>
               {getCantoneseComponent().map(dish => {
                 return (
-                  <List.Item key={dish.name} style={{ paddingTop: "5%" }}>
-                    <Card.Content style={{ left: "15px" }}>
+                  <Segment key={dish.name}>
+                    {dish.image && (
+                      <Popup
+                        trigger={
+                          <Image
+                            src={dish.image}
+                            floated="right"
+                            rounded
+                            style={{width: '60px'}}
+                          />
+                        }
+                        hideOnScroll
+                        flowing
+                      >
+                        <Image src={dish.image} size="medium" rounded />
+                      </Popup>
+                    )}
+                    <Card.Content>
                       <Header
                         as="h4"
                         floated="right"
+                        textAlign="center"
                         color="green"
                         style={{
-                          fontWeight: "400",
-                          position: "relative",
-                          bottom: "25px"
+                          fontWeight: "400"
                         }}
                       >
                         {dish.price}
                       </Header>
-                      <Card.Header
-                        style={{
-                          position: "relative",
-                          right: "15px",
-                          bottom: "25px"
-                        }}
-                      >
-                        <Popup
-                          trigger={
-                            <Image
-                              avatar={true}
-                              src={dish.image}
-                              size="tiny"
-                              floated="left"
-                            />
-                          }
-                          hideOnScroll
-                          flowing
-                        >
-                          <Image src={dish.image} size="medium" rounded />
-                        </Popup>
+                      <Card.Header>
                         <Header as="h4">{dish.name}</Header>
                       </Card.Header>
                       {dish.description && (
-                        <Card.Description>
-                          <Header as="h5" color="grey">
-                            {dish.description}
-                          </Header>
-                        </Card.Description>
+                        <Header
+                          as="h5"
+                          color="grey"
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between"
+                          }}
+                        >
+                          {dish.description}
+                        </Header>
                       )}
                     </Card.Content>
-                  </List.Item>
+                  </Segment>
                 );
               })}
-            </List>
+            </Segment.Group>
           )}
           {!matches.mobile && (
             <Item.Group
@@ -84,7 +92,14 @@ const CantoneseComponentComponent = () => {
               {getCantoneseComponent().map(dish => {
                 return (
                   <Item key={dish.name}>
-                    {dish.image && <Image src={dish.image} size="small" rounded='true' style={{maxHeight: '150px'}}/>}
+                    {dish.image && (
+                      <Image
+                        src={dish.image}
+                        size="small"
+                        rounded="true"
+                        style={{ maxHeight: "150px" }}
+                      />
+                    )}
                     <Card.Content>
                       <Header
                         as="h3"

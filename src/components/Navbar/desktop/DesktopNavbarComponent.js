@@ -78,9 +78,6 @@ const DesktopNavbarComponent = () => {
             </Header>
           </Link>
         </Menu.Item>
-        <Menu.Item name="About">
-          <Header as="h4">About</Header>
-        </Menu.Item>
         <Menu.Item>
           <MenuSearchComponent />
         </Menu.Item>
