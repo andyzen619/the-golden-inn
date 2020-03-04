@@ -3,6 +3,7 @@ import faker from "faker";
 import React, { Component, useContext } from "react";
 import { Search, Grid, Header, Segment, Card, Image } from "semantic-ui-react";
 import { MenuContext } from "../context/menu-context";
+import './MenuSearchStyle.css'
 
 const style = {
   position: "relative"
