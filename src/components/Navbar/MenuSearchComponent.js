@@ -37,8 +37,7 @@ export default class SearchExampleStandard extends Component {
       const newDishObj = {
         title: dish.name,
         description: dish.description,
-        price: dish.price,
-        image: dish.image
+        price: dish.price
       };
       result.push(newDishObj);
     });
