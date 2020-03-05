@@ -60,14 +60,14 @@ const SweetAndSourComponent = () => {
                 style={{
                   background: "white",
                   padding: "5%",
-                  boxShadow: "5px 5px 5px 5px black"
+                  boxShadow: "5px 5px 5px 5px black",
+                  width: '60%'
                 }}
                 divided
               >
                 {getSweetAndSour().map(dish => {
                   return (
                     <Item key={dish.name}>
-                      {dish.image && <Image src={dish.image} size="small" />}
                       <Card.Content>
                         <Header
                           as="h3"
