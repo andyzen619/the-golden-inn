@@ -54,7 +54,7 @@ function App() {
               <HomepageComponent />
             </Route>
 
-            <Route exact path="/menu">
+            <Route path="/menu">
               <DesktopMenuComponent />
             </Route>
           </Switch>
