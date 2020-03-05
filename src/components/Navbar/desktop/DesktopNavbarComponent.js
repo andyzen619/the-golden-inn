@@ -68,7 +68,16 @@ const DesktopNavbarComponent = () => {
       fluid
       secondary
     >
-      {generateLogo()}
+      {/* {generateLogo()} */}
+      <Menu.Item>
+        <Link to="/">
+          <Image
+            size="tiny"
+            src="https://i.imgur.com/wTWZiYT.png"
+            onClick={updateBigLogo}
+          />
+        </Link>
+      </Menu.Item>
 
       <Menu.Menu position="right">
         <Menu.Item name="Menu">

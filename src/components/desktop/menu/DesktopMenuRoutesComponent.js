@@ -30,6 +30,10 @@ const DesktopMenuRoutesComponent = () => {
       <Route exact path="/the-golden-inn/menu">
         <Segment basic>
           <Header as="h1">Special Combinations Plates</Header>
+          <Item.Meta>
+            No substitutions within combinations plates. Get $1 off betwean
+            11:30am-2pm
+          </Item.Meta>
         </Segment>
         <div style={menuItemStyle}>
           <CombinationsComponent />

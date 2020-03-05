@@ -90,7 +90,7 @@ const CombinationsComponent = () => {
                   background: "white",
                   padding: "5%",
                   boxShadow: "5px 5px 5px 5px black",
-                  width: "60%"
+                  width: "80%"
                 }}
                 divided
               >
