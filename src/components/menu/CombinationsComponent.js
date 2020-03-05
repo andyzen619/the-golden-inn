@@ -79,44 +79,69 @@ const CombinationsComponent = () => {
             </Segment.Group>
           )}
           {!matches.mobile && (
-            <Item.Group
+            <div
               style={{
-                background: "white",
-                padding: "5%",
-                boxShadow: "5px 5px 5px 5px black"
+                display: "flex",
+                justifyContent: "space-evenly"
               }}
-              divided
             >
-              {getCombinations().map(dish => {
-                return (
-                  <Item key={dish.name}>
-                    <Card.Content>
-                      <Header
-                        as="h3"
-                        floated="right"
-                        color="green"
-                        style={{ fontWeight: "400" }}
-                      >
-                        {dish.price}
-                      </Header>
-                      <Item.Header>
-                        <Header as="h4">{dish.name}</Header>
-                      </Item.Header>
-                      {dish.description && (
-                        <Item.Meta>{dish.description}</Item.Meta>
-                      )}
-                    </Card.Content>
-                    {dish.image && (
+              <Item.Group
+                style={{
+                  background: "white",
+                  padding: "5%",
+                  boxShadow: "5px 5px 5px 5px black",
+                  width: "60%"
+                }}
+                divided
+              >
+                {getCombinations().map(dish => {
+                  return (
+                    <Item key={dish.name}>
+                      <Card.Content>
+                        <Header
+                          as="h3"
+                          floated="right"
+                          color="green"
+                          style={{ fontWeight: "400" }}
+                        >
+                          {dish.price}
+                        </Header>
+                        <Item.Header>
+                          <Header as="h4">{dish.name}</Header>
+                        </Item.Header>
+                        {dish.description && (
+                          <Item.Meta>{dish.description}</Item.Meta>
+                        )}
+                      </Card.Content>
+                    </Item>
+                  );
+                })}
+              </Item.Group>
+              <div>
+                {getCombinations().map(dish => {
+                  if (dish.image) {
+                    return (
                       <Image
                         src={dish.image}
-                        size="small"
-                        style={{ maxHeight: "150px", paddingLeft: '10px' }}
+                        size="large"
+                        rounded
+                        style={{
+                          margin: "50px",
+                          borderRadius: "25px",
+                        }}
+                        label={{
+                          color: "brown",
+                          content: dish.name,
+                          icon: "food",
+                          ribbon: "right",
+                          size: "large"
+                        }}
                       />
-                    )}
-                  </Item>
-                );
-              })}
-            </Item.Group>
+                    );
+                  }
+                })}
+              </div>
+            </div>
           )}
         </Fragment>
       )}

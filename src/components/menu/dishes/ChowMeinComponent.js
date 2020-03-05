@@ -49,38 +49,71 @@ const ChowMeinComponentComponent = () => {
             </Segment.Group>
           )}
           {!matches.mobile && (
-            <Item.Group
+            <div
               style={{
-                background: "white",
-                padding: "5%",
-                boxShadow: "5px 5px 5px 5px black"
+                display: "flex",
+                justifyContent: "space-evenly"
               }}
-              divided
             >
-              {getChowMeinComponent().map(dish => {
-                return (
-                  <Item key={dish.name}>
-                    {dish.image && <Image src={dish.image} size="small" />}
-                    <Card.Content>
-                      <Header
-                        as="h3"
-                        floated="right"
-                        color="green"
-                        style={{ fontWeight: "400" }}
-                      >
-                        {dish.price}
-                      </Header>
-                      <Item.Header>
-                        <Header as="h4">{dish.name}</Header>
-                      </Item.Header>
-                      {dish.description && (
-                        <Item.Meta>{dish.description}</Item.Meta>
-                      )}
-                    </Card.Content>
-                  </Item>
-                );
-              })}
-            </Item.Group>
+              <Item.Group
+                style={{
+                  background: "white",
+                  padding: "5%",
+                  boxShadow: "5px 5px 5px 5px black",
+                  width: "60%"
+                }}
+                divided
+              >
+                {getChowMeinComponent().map(dish => {
+                  return (
+                    <Item key={dish.name}>
+                      <Card.Content>
+                        <Header
+                          as="h3"
+                          floated="right"
+                          color="green"
+                          style={{ fontWeight: "400" }}
+                        >
+                          {dish.price}
+                        </Header>
+                        <Item.Header>
+                          <Header as="h4">{dish.name}</Header>
+                        </Item.Header>
+                        {dish.description && (
+                          <Item.Meta>{dish.description}</Item.Meta>
+                        )}
+                      </Card.Content>
+                    </Item>
+                  );
+                })}
+              </Item.Group>
+              <div>
+                {getChowMeinComponent().map(dish => {
+                  if (dish.image) {
+                    return (
+                      <Image
+                        src={dish.image}
+                        size="large"
+                        rounded
+                        style={{
+                          margin: "50px",
+                          borderRadius: "25px",
+                          // boxShadow: "5px 5px 5px 5px black",
+                          // filter: "blur"
+                        }}
+                        label={{
+                          color: "brown",
+                          content: dish.name,
+                          icon: "food",
+                          ribbon: "right",
+                          size: "large"
+                        }}
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
           )}
         </Fragment>
       )}

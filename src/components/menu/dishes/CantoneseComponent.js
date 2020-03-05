@@ -6,17 +6,13 @@ import {
   Image,
   Popup,
   Item,
-  Segment
+  Segment,
+  Label
 } from "semantic-ui-react";
 import { MenuContext } from "../../context/menu-context";
 import Media from "react-media";
 const CantoneseComponentComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
-
-  const menuStyle = {
-    display: 'flex',
-    justifyContent: 'space-evenly'
-  }
 
   const getCantoneseComponent = () => {
     if (menu.dishes) {
@@ -86,13 +82,18 @@ const CantoneseComponentComponent = () => {
             </Segment.Group>
           )}
           {!matches.mobile && (
-            <div style={menuStyle}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly"
+              }}
+            >
               <Item.Group
                 style={{
                   background: "white",
                   padding: "5%",
                   boxShadow: "5px 5px 5px 5px black",
-                  width: '60%'
+                  width: "60%"
                 }}
                 divided
               >
@@ -127,6 +128,32 @@ const CantoneseComponentComponent = () => {
                   );
                 })}
               </Item.Group>
+              <div>
+                {getCantoneseComponent().map(dish => {
+                  if (dish.image) {
+                    return (
+                      <Image
+                        src={dish.image}
+                        size="large"
+                        rounded
+                        style={{
+                          margin: "50px",
+                          borderRadius: "25px",
+                          // boxShadow: "5px 5px 5px 5px black",
+                          // filter: "blur"
+                        }}
+                        label={{
+                          color: "brown",
+                          content: dish.name,
+                          icon: "food",
+                          ribbon: "right",
+                          size: "large"
+                        }}
+                      />
+                    );
+                  }
+                })}
+              </div>
             </div>
           )}
         </Fragment>
