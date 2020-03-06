@@ -1,5 +1,5 @@
 # The Golden Inn Restaurant
-## https://andyzen619.github.io/the-golden-inn/
+## http://thegoldeninn.ca/
 ## Description
 A revamp of a old Go-daddy website using react and react router. Main purpose of this project was to learn React Router concepts, responsive web design, UI strategies and Firebase database and analytics technologies. 
 ## Features
