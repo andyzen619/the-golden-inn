@@ -2,12 +2,10 @@ import React, { useContext, Fragment } from "react";
 import {
   Card,
   Header,
-  List,
   Image,
   Popup,
   Item,
   Segment,
-  Label
 } from "semantic-ui-react";
 import { MenuContext } from "../../context/menu-context";
 import Media from "react-media";
@@ -116,19 +114,11 @@ const CantoneseComponentComponent = () => {
                           <Item.Meta>{dish.description}</Item.Meta>
                         )}
                       </Card.Content>
-                      {/* {dish.image && (
-                      <Image
-                        src={dish.image}
-                        size="small"
-                        rounded="true"
-                        style={{ maxHeight: "150px", paddingLeft: '10px' }}
-                      />
-                    )} */}
                     </Item>
                   );
                 })}
               </Item.Group>
-              <div>
+              <div style={{width: '30%'}}>
                 {getCantoneseComponent().map(dish => {
                   if (dish.image) {
                     return (
@@ -139,8 +129,6 @@ const CantoneseComponentComponent = () => {
                         style={{
                           margin: "50px",
                           borderRadius: "25px",
-                          // boxShadow: "5px 5px 5px 5px black",
-                          // filter: "blur"
                         }}
                         label={{
                           color: "brown",

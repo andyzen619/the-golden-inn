@@ -88,7 +88,7 @@ const SweetAndSourComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div>
+              <div style={{width: '30%'}}>
                 {getSweetAndSour().map(dish => {
                   if (dish.image) {
                     return (
@@ -99,8 +99,6 @@ const SweetAndSourComponent = () => {
                         style={{
                           margin: "50px",
                           borderRadius: "25px"
-                          // boxShadow: "5px 5px 5px 5px black",
-                          // filter: "blur"
                         }}
                         label={{
                           color: "brown",

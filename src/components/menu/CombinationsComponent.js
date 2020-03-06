@@ -117,7 +117,7 @@ const CombinationsComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div>
+              <div style={{width: '30%'}}>
                 {getCombinations().map(dish => {
                   if (dish.image) {
                     return (
