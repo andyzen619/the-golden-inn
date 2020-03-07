@@ -44,7 +44,7 @@ const HomepageComponent = props => {
 
 function App() {
   return (
-    <Router style={AppStyle.backgroundColor} basename='/the-golden-inn'>
+    <Router style={AppStyle.backgroundColor}>
       <div style={AppStyle.backgroundColor}>
         <MenuItemContextProvider>
           <NavBarComponent />
