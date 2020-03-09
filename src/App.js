@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Media from "react-media";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 import LandingpageComponent from "./components/LandingComponent";
 import DesktopLandingPageComponent from "./components/desktop/DesktopLandingComponent";
@@ -17,8 +18,14 @@ const AppStyle = {
   backgroundColor: { background: "#d9c8b5" }
 };
 
+function initializeReactGA() {
+  ReactGA.initialize('UA-160054958-1');
+  ReactGA.pageview('/');
+}
+
 const HomepageComponent = props => {
   const { backgroundColor } = AppStyle;
+  initializeReactGA();
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
       {matches => (
