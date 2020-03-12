@@ -59,7 +59,7 @@ const DesktopMenuRoutesComponent = () => {
             <Header as="h1">Full Course Meals</Header>
             <Item.Meta>
               Appetizers cannot be substituted. Other substitutions require
-              charge.
+              minimum $2.00 charge**.
               <div>Prices are subject to change.**</div>
             </Item.Meta>
           </Segment>
