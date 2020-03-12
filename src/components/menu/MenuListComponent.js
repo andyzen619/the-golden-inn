@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./MenuListComponent.css"
+import "./MenuListComponent.css";
 import { Accordion, Icon, Header } from "semantic-ui-react";
 
 import AppetizersComponent from "./dishes/AppetizersComponent";
@@ -48,9 +48,11 @@ const MenuListComponenet = () => {
       >
         <Icon name="dropdown" />
         Full Court Dinner
+        {/* <Header sub as='h6' style={{width: '300px'}}>Any substitutions incur a minimum $2.00 charge **</Header> */}
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 1}>
-        <DinnersComponent/>
+        <h6 style={{margin: 0, left: '15px', position:'relative'}}>Minimum $2.00 charge for substitutions</h6>
+        <DinnersComponent />
       </Accordion.Content>
 
       <Accordion.Title

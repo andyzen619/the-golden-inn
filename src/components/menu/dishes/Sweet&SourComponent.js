@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
+import { Segment, Card, Header, Item, Image, Popup } from "semantic-ui-react";
 import Media from "react-media";
 
 import { MenuContext } from "../../context/menu-context";
@@ -25,6 +25,22 @@ const SweetAndSourComponent = () => {
               {getSweetAndSour().map(dish => {
                 return (
                   <Segment key={dish.name}>
+                    {dish.image && (
+                      <Popup
+                        trigger={
+                          <Image
+                            src={dish.image}
+                            floated="right"
+                            rounded
+                            style={{ width: "60px" }}
+                          />
+                        }
+                        hideOnScroll
+                        flowing
+                      >
+                        <Image src={dish.image} size="medium" rounded />
+                      </Popup>
+                    )}
                     <Card.Content>
                       <Header
                         as="h4"
@@ -61,7 +77,7 @@ const SweetAndSourComponent = () => {
                   background: "white",
                   padding: "5%",
                   boxShadow: "5px 5px 5px 5px black",
-                  width: '60%'
+                  width: "60%"
                 }}
                 divided
               >
@@ -88,7 +104,7 @@ const SweetAndSourComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div style={{width: '30%'}}>
+              <div style={{ width: "30%" }}>
                 {getSweetAndSour().map(dish => {
                   if (dish.image) {
                     return (

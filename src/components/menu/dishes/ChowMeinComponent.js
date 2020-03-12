@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header, Image, Item } from "semantic-ui-react";
+import { Segment, Card, Header, Image, Item, Popup } from "semantic-ui-react";
 import Media from "react-media";
 
 import { MenuContext } from "../../context/menu-context";
@@ -25,6 +25,22 @@ const ChowMeinComponentComponent = () => {
               {getChowMeinComponent().map(dish => {
                 return (
                   <Segment key={dish.name}>
+                    {dish.image && (
+                      <Popup
+                        trigger={
+                          <Image
+                            src={dish.image}
+                            floated="right"
+                            rounded
+                            style={{ width: "60px" }}
+                          />
+                        }
+                        hideOnScroll
+                        flowing
+                      >
+                        <Image src={dish.image} size="medium" rounded />
+                      </Popup>
+                    )}
                     <Card.Content>
                       <Header
                         as="h4"
@@ -87,7 +103,7 @@ const ChowMeinComponentComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div style={{width: '30%'}}>
+              <div style={{ width: "30%" }}>
                 {getChowMeinComponent().map(dish => {
                   if (dish.image) {
                     return (
@@ -97,7 +113,7 @@ const ChowMeinComponentComponent = () => {
                         rounded
                         style={{
                           margin: "50px",
-                          borderRadius: "25px",
+                          borderRadius: "25px"
                         }}
                         label={{
                           color: "brown",
