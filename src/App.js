@@ -1,23 +1,29 @@
 import React, { Fragment } from "react";
 import Media from "react-media";
-import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactGA from "react-ga";
 
 import LandingpageComponent from "./components/LandingComponent";
-import DesktopLandingPageComponent from "./components/desktop/DesktopLandingComponent";
+// import DesktopLandingPageComponent from "./components/desktop/DesktopLandingComponent";
 import VisitUsComponenet from "./components/VisitUsComponent";
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
 import DesktopVisitUsComponent from "./components/desktop/DesktopVisitUsComponent";
 import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
+import DesktopLandingV2 from "./components/desktop/DesktopLandingV2";
+import DesktopVisitUsV2 from "./components/desktop/DesktopVisitUsV2";
 
 import { MenuItemContextProvider } from "./components/context/menu-context";
 
-import {Message, Header} from 'semantic-ui-react';
+import { Message } from "semantic-ui-react";
 
 const AppStyle = {
-  backgroundColor: { background: "#d9c8b5" }
+  backgroundColor: {
+    backgroundImage: `linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),url("https://scontent-ort2-2.xx.fbcdn.net/v/t1.15752-9/90638527_2542059202721532_3598802648356093952_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=c5iOBlIIPsUAX_z4-zw&_nc_ht=scontent-ort2-2.xx&oh=73412c67136a40e2e6151d3719d87da2&oe=5EA3FC74")`
+  }
 };
 
 function initializeReactGA() {
@@ -40,8 +46,8 @@ const HomepageComponent = props => {
           )}
           {!matches.mobile && (
             <div style={backgroundColor}>
-              <DesktopLandingPageComponent />
-              <DesktopVisitUsComponent />
+              <DesktopLandingV2 />
+              <DesktopVisitUsV2 />
             </div>
           )}
           <MapComponent />
@@ -57,10 +63,7 @@ function App() {
       <div style={AppStyle.backgroundColor}>
         <MenuItemContextProvider>
           <NavBarComponent />
-          <Message
-            warning
-            style={{textAlign: 'center', margin: '0'}}
-          >
+          <Message warning style={{ textAlign: "center", margin: "0" }}>
             <Message.Header>Changes in Service</Message.Header>
             <p>
               We will only be doing{" "}

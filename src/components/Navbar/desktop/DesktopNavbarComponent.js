@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const DesktopNavbarComponentStyle = {
   divStyle: {
-    background: "#d9c8b5",
+    background: "#b82e26",
     padding: "0 2em"
   }
 };
@@ -61,37 +61,76 @@ const DesktopNavbarComponent = () => {
   };
 
   return (
-    <Responsive
-      as={Menu}
-      {...Responsive.onlyComputer}
-      style={divStyle}
-      fluid
-      secondary
+    // <Responsive
+    //   as={Menu}
+    //   {...Responsive.onlyComputer}
+    //   style={divStyle}
+    //   className="opacity-75"
+    //   fluid
+    //   secondary
+    // >
+    //   {/* {generateLogo()} */}
+    //   <div>
+    // <Menu.Item>
+    //   <Link to="/">
+    //     {/* <Image
+    //     size="tiny"
+    //     src="https://i.imgur.com/wTWZiYT.png"
+    //     onClick={updateBigLogo}
+    //   /> */}
+    //     <div>HOME</div>
+    //   </Link>
+    // </Menu.Item>
+
+    // <Menu.Item name="Menu">
+    //   <Link to="/menu">
+    //     <Header as="h4" onClick={updateSmallLogo}>
+    //       MENU
+    //     </Header>
+    //   </Link>
+    // </Menu.Item>
+    //   </div>
+
+    // <Menu.Menu position="right">
+    //   <Menu.Item>
+    //     <MenuSearchComponent />
+    //   </Menu.Item>
+    // </Menu.Menu>
+    // </Responsive>
+    <div
+      style={{ background: "#b82e26" }}
+      className="flex text-white justify-around py-4"
     >
-      {/* {generateLogo()} */}
-      <Menu.Item>
+      <Menu.Item className='flex flex-col justify-center'>
         <Link to="/">
-          <Image
-            size="tiny"
-            src="https://i.imgur.com/wTWZiYT.png"
-            onClick={updateBigLogo}
-          />
+          <div className="text-2xl">HOME</div>
         </Link>
       </Menu.Item>
 
-      <Menu.Menu position="right">
-        <Menu.Item name="Menu">
-          <Link to="/menu">
-            <Header as="h4" onClick={updateSmallLogo}>
-              Menu
-            </Header>
-          </Link>
-        </Menu.Item>
+      <Menu.Item name="Menu" className='flex flex-col justify-center'>
+        <Link to="/menu">
+          <div className="text-2xl">MENU</div>
+        </Link>
+      </Menu.Item>
+
+      <Menu.Item name="Menu" className='flex flex-col justify-center'>
+        <Link to="">
+          <div className="text-2xl">VISIT US</div>
+        </Link>
+      </Menu.Item>
+
+      <Menu.Item name="Menu" className='flex flex-col justify-center'>
+        <Link to="">
+          <div className="text-2xl"> HOURS</div>
+        </Link>
+      </Menu.Item>
+
+      <Menu.Menu className='flex flex-col justify-center'>
         <Menu.Item>
           <MenuSearchComponent />
         </Menu.Item>
       </Menu.Menu>
-    </Responsive>
+    </div>
   );
 };
 
