@@ -18,7 +18,7 @@ const DesktopVisitUsV2 = props => {
       className="flex flex-col w-screen justify-evenly text-white"
     >
       <div className="flex justify-center text-5xl">VISIT US</div>
-      <div className="flex justify-center text-xl">
+      <div className="flex justify-center text-xl text-center p-4">
         155 Main Street West, Picton, Prince Edward, ON, Canada
       </div>
       <div className="flex justify-center text-xl">613-476-7056</div>

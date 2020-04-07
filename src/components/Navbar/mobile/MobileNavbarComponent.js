@@ -11,7 +11,7 @@ const SmallMobileComponent = () => {
       as={Menu}
       {...Responsive.onlyMobile}
       style={{
-        background: "#d9c8b5",
+        background: "#b82e26",
         padding: "3%",
         fontSize: ".90rem"
       }}
@@ -28,7 +28,7 @@ const RegularMobileComponent = () => {
       as={Menu}
       {...Responsive.onlyMobile}
       style={{
-        background: "#d9c8b5",
+        background: "#b82e26",
         padding: "3%"
       }}
     >
@@ -43,8 +43,6 @@ const MobileNavBarComponent = menu => {
     <Media
       queries={{
         small: "(max-width: 320px)"
-        // medium: "(min-width: 600px) and (max-width: 1199px)",
-        // large: "(min-width: 1200px)"
       }}
     >
       {matches => (

@@ -12,7 +12,7 @@ const MenuComponent = () => (
   <Modal
     trigger={
       <Menu.Item position="left">
-        <Header>Menu</Header>
+        <div className='text-white text-lg'>Menu</div>
       </Menu.Item>
     }
     closeIcon
