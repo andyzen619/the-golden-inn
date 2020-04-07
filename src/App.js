@@ -1,14 +1,10 @@
-import React, { Fragment } from "react";
-import Media from "react-media";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactGA from "react-ga";
 
-import LandingpageComponent from "./components/LandingComponent";
-// import DesktopLandingPageComponent from "./components/desktop/DesktopLandingComponent";
-import VisitUsComponenet from "./components/VisitUsComponent";
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
-import DesktopVisitUsComponent from "./components/desktop/DesktopVisitUsComponent";
+
 import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
 import DesktopLandingV2 from "./components/desktop/DesktopLandingV2";
 import DesktopVisitUsV2 from "./components/desktop/DesktopVisitUsV2";
