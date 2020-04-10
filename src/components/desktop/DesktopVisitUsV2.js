@@ -25,7 +25,7 @@ const DesktopVisitUsV2 = props => {
       <div className="flex justify-center">
         <a href="tel:+613-476-7056">
           <div
-            className="rounded-full p-4 shadow bg-red-700 opacity-75 hover:opacity-100"
+            className="rounded-full p-4 shadow bg-red-700 opacity-75 hover:opacity-100 font-semibold hover:text-white"
           >
             CALL TO PLACE YOUR ORDER
           </div>

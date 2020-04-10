@@ -19,7 +19,7 @@ const DesktopLandingV2 = (prop) => {
       <div className="flex justify-center p-8">
         <div
           style={{ backgroundColor: "#b82e26" }}
-          className="px-6 py-24 rounded-full text-3xl opacity-75"
+          className="px-8 py-24 rounded-full text-4xl opacity-75"
         >
           <div className="flex justify-center text-white opacity-100">GOLDEN INN</div>
           <div className="flex justify-center pt-2 opacity-100">RESTAURANT</div>
@@ -30,7 +30,7 @@ const DesktopLandingV2 = (prop) => {
       </div>
       <div className="flex justify-center text-black p-2">
         <a href="tel:+613-476-7056">
-          <div className="bg-white opacity-75 hover:opacity-100 p-4 px-12 mr-2">
+          <div className="bg-white opacity-75 hover:opacity-100 p-4 px-12 mr-2 font-semibold hover:text-black">
             Order
           </div>
         </a>
@@ -60,7 +60,7 @@ const DesktopLandingV2 = (prop) => {
                     </Modal>
                   </div>
                 )}
-                {!matches.mobile && <Link to="/menu">Menu</Link>}
+                {!matches.mobile && <Link to="/menu" className='font-semibold hover:text-black'>Menu</Link>}
               </Fragment>
             )}
           </Media>

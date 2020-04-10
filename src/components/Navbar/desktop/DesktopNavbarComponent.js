@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Responsive, Menu, Header, Image } from "semantic-ui-react";
+import React from "react";
+import {Menu} from "semantic-ui-react";
 import MenuSearchComponent from "../MenuSearchComponent";
 
 import { Link } from "react-router-dom";
 
 const DesktopNavbarComponent = () => {
 
-  const textStyle = 'text-sm sm:text-2xl'
+  const textStyle = 'text-sm sm:text-2xl hover:font-semibold text-white'
  
   return (
     <div
