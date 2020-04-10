@@ -34,7 +34,7 @@ const HomepageComponent = (props) => {
     <div style={backgroundColor}>
       <DesktopLandingV2 />
       <DesktopVisitUsV2 />
-      <MapComponent />
+      <MapComponent/>
     </div>
   );
 };
