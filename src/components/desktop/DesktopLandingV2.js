@@ -21,8 +21,8 @@ const DesktopLandingV2 = (prop) => {
           style={{ backgroundColor: "#b82e26" }}
           className="px-6 py-24 rounded-full text-3xl opacity-75"
         >
-          <div className="flex justify-center">GOLDEN INN</div>
-          <div className="flex justify-center pt-2">RESTAURANT</div>
+          <div className="flex justify-center text-white opacity-100">GOLDEN INN</div>
+          <div className="flex justify-center pt-2 opacity-100">RESTAURANT</div>
         </div>
       </div>
       <div className="flex justify-center text-lg text-center p-4">

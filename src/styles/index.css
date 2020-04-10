@@ -5,3 +5,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.font-advent {
+  font-family: 'Advent Pro', sans-serif;
+}

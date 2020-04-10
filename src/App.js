@@ -42,12 +42,12 @@ const HomepageComponent = (props) => {
 function App() {
   return (
     <Router style={AppStyle.backgroundColor}>
-      <div style={AppStyle.backgroundColor}>
+      <div style={AppStyle.backgroundColor} className='font-advent'>
         <MenuItemContextProvider>
           <NavBarComponent />
           <Message warning style={{ textAlign: "center", margin: "0" }}>
             <Message.Header>Changes in Service</Message.Header>
-            <p>
+            <p className='font-sans'>
               We will only be doing{" "}
               <a style={{ fontSize: "1.2em", color: "black" }}>take-out</a> and
               are suspending all dine-in services to aid in slowing the COVID-19
