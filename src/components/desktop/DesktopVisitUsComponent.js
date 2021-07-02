@@ -50,7 +50,7 @@ const DesktopVisitUsComponent = () => {
         155 Main Street West, Picton, Prince Edward, ON, Canada
       </Header>
       <Header size="medium">613-476-7056</Header>
-      <a href="tel:+613-476-7056">
+      <a href="tel:+6134767056">
         <Button color="google plus">Call to place your order</Button>
       </a>
       <Header size="medium">Hours of operation</Header>
