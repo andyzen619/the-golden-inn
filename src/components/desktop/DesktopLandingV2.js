@@ -29,7 +29,7 @@ const DesktopLandingV2 = (prop) => {
         SERVING AUTHENTIC CANTONESE STYLE CHINESE FOOD FOR 25 YEARS
       </div>
       <div className="flex justify-center text-black p-2">
-        <a href="tel:+613-476-7056">
+        <a href="tel:6134767056">
           <div className="bg-white opacity-75 hover:opacity-100 p-4 px-12 mr-2 font-semibold hover:text-black">
             Order
           </div>
