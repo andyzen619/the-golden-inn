@@ -3,9 +3,8 @@
 ## Description
 A revamp of a old Go-daddy website using react and react router. Main purpose of this project was to learn React Router concepts, responsive web design, UI strategies and Firebase database and analytics technologies. 
 ## Features
-1. Elastic Search
-2. Resonsive design for mobile and desktop
-3. Single page application
+1. Responsive design for mobile and desktop
+2. Single page application
 ## Quick start
 1. Clone project
 2. Install dependencies using command `npm install`
@@ -18,3 +17,11 @@ A revamp of a old Go-daddy website using react and react router. Main purpose of
 4. React Router
 5. Firebase FireStore
 6. Lodash
+## Deployment (Option 1)
+1. Create PR to master.
+2. Review, approve, merge.
+3. Check GH actions build trigger.
+## Deployment (Options 2)
+1. Sign out of GitHub CLI locally.
+2. Update git config global locally to match project account.
+3. Run command to run deploy script `npm run deploy`
