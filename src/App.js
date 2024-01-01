@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactGA from "react-ga";
+import { Message } from "semantic-ui-react";
 
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
@@ -9,9 +10,7 @@ import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
 import DesktopLandingV2 from "./components/desktop/DesktopLandingV2";
 import DesktopVisitUsV2 from "./components/desktop/DesktopVisitUsV2";
 
-import { MenuItemContextProvider } from "./components/context/menu-context";
-
-import { Message } from "semantic-ui-react";
+import { MenuItemContextProvider, db } from "./components/context/menu-context";
 
 const AppStyle = {
   backgroundColor: {
@@ -34,27 +33,44 @@ const HomepageComponent = (props) => {
     <div style={backgroundColor}>
       <DesktopLandingV2 />
       <DesktopVisitUsV2 />
-      <MapComponent/>
+      <MapComponent />
     </div>
   );
 };
 
 function App() {
+  const [banner, setBanner] = useState({
+    visible: false,
+    title: "",
+    message: "",
+  });
+
+  useEffect(() => {
+    db.collection("messages")
+      .doc("bannerMessage")
+      .get()
+      .then((querySnapshot) => {
+        const { message, title, visible } = querySnapshot.data();
+
+        setBanner({
+          message,
+          title,
+          visible,
+        });
+      });
+  }, []);
+
   return (
     <Router style={AppStyle.backgroundColor}>
-      <div style={AppStyle.backgroundColor} className='font-advent'>
+      <div style={AppStyle.backgroundColor} className="font-advent">
         <MenuItemContextProvider>
           <NavBarComponent />
-          <Message warning style={{ textAlign: "center", margin: "0" }}>
-            <Message.Header>Changes in Service</Message.Header>
-            <p className='font-sans'>
-              We will only be doing{" "}
-              <a style={{ fontSize: "1.2em", color: "black" }}>take-out</a> and
-              are suspending all dine-in services to aid in slowing the COVID-19
-              virus outbreak. We apologize for any inconvenience.
-            </p>
-          </Message>
-
+          {banner.visible && (
+            <Message warning style={{ textAlign: "center", margin: "0" }}>
+              <Message.Header>{banner.title}</Message.Header>
+              <p className="font-sans">{banner.message}</p>
+            </Message>
+          )}
           <Switch>
             <Route exact path="/">
               <HomepageComponent />
