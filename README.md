@@ -17,7 +17,7 @@ A revamp of a old Go-daddy website using react and react router. Main purpose of
 4. React Router
 5. Firebase FireStore
 6. Lodash
-7. NODE V16 REQUIRED
+7. NODE V16
 ## Deployment
 1. Create PR to master.
 2. Review, approve, merge.
