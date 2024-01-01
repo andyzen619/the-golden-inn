@@ -17,11 +17,8 @@ A revamp of a old Go-daddy website using react and react router. Main purpose of
 4. React Router
 5. Firebase FireStore
 6. Lodash
-## Deployment (Option 1)
+7. NODE V16 REQUIRED
+## Deployment
 1. Create PR to master.
 2. Review, approve, merge.
 3. Check GH actions build trigger.
-## Deployment (Options 2)
-1. Sign out of GitHub CLI locally.
-2. Update git config global locally to match project account.
-3. Run command to run deploy script `npm run deploy`

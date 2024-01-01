@@ -81,6 +81,9 @@ function App() {
             </Route>
           </Switch>
         </MenuItemContextProvider>
+        <a href="https://www.flaticon.com/free-icons/wok" title="wok icons">
+          Wok icons created by Freepik - Flaticon
+        </a>
       </div>
     </Router>
   );
