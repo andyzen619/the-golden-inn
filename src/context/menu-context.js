@@ -10,7 +10,7 @@ firebase.initializeApp({
 
 export const db = firebase.firestore();
 
-const MenuContext = React.createContext([{}, () => {}]);
+const MenuContext = React.createContext([{}, () => { }]);
 
 const MenuItemContextProvider = (props) => {
   const [menu, setMenu] = useState({});

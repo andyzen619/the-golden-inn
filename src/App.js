@@ -5,40 +5,13 @@ import { Message } from "semantic-ui-react";
 
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
-
 import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
-import DesktopLandingV2 from "./components/desktop/DesktopLandingV2";
-import DesktopVisitUsV2 from "./components/desktop/DesktopVisitUsV2";
+import DesktopLanding from "./components/Landing";
+import DesktopVisitUs from "./components/VisitUs";
+import { MenuItemContextProvider, db } from "./context/menu-context";
+import { AppStyle } from './constants';
 
-import { MenuItemContextProvider, db } from "./components/context/menu-context";
-
-const AppStyle = {
-  backgroundColor: {
-    backgroundImage: `linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ),url("https://firebasestorage.googleapis.com/v0/b/the-golden-inn-restaurant.appspot.com/o/goldenInnBackground.png?alt=media&token=c031b198-7ddc-4881-94e9-b61866bc15ca")`,
-  },
-};
-
-function initializeReactGA() {
-  ReactGA.initialize("UA-160054958-1");
-  ReactGA.pageview("/");
-}
-
-const HomepageComponent = (props) => {
-  const { backgroundColor } = AppStyle;
-  initializeReactGA();
-  return (
-    <div style={backgroundColor}>
-      <DesktopLandingV2 />
-      <DesktopVisitUsV2 />
-      <MapComponent />
-    </div>
-  );
-};
-
-function App() {
+export default function App() {
   const [banner, setBanner] = useState({
     visible: false,
     title: "",
@@ -89,4 +62,20 @@ function App() {
   );
 }
 
-export default App;
+function initializeReactGA() {
+  ReactGA.initialize("UA-160054958-1");
+  ReactGA.pageview("/");
+}
+
+function HomepageComponent() {
+  const { backgroundColor } = AppStyle;
+  initializeReactGA();
+  return (
+    <div style={backgroundColor}>
+      <DesktopLanding />
+      <DesktopVisitUs />
+      <MapComponent />
+    </div>
+  );
+};
+

@@ -1,15 +1,13 @@
-import _ from "lodash";
-import faker from "faker";
-import React, { Component, useContext } from "react";
-import { Search, Grid, Header, Segment, Card, Image } from "semantic-ui-react";
-import { MenuContext } from "../context/menu-context";
+import lodash from "lodash";
+import React, { Component, } from "react";
+import { Search, Grid } from "semantic-ui-react";
+import { MenuContext } from "../../context/menu-context";
 import './MenuSearchStyle.css'
 
 const style = {
   position: "relative"
 };
 
-// const [menu, setMenu] = useContext(MenuContext);
 
 const initialState = { isLoading: false, results: [], value: "" };
 
@@ -52,21 +50,23 @@ export default class SearchExampleStandard extends Component {
     return result;
   };
 
-  handleResultSelect = (e, { result }) =>
+  handleResultSelect = (_, { result }) =>
     this.setState({ value: result.title });
 
-  handleSearchChange = (e, { value }) => {
+  handleSearchChange = (_, { value }) => {
     this.setState({ isLoading: true, value });
 
     setTimeout(() => {
-      if (this.state.value.length < 1) return this.setState(initialState);
+      if (this.state.value.length < 1) {
+        return this.setState(initialState);
+      }
 
-      const re = new RegExp(_.escapeRegExp(this.state.value), "i");
+      const re = new RegExp(lodash.escapeRegExp(this.state.value), "i");
       const isMatch = result => re.test(result.title);
 
       this.setState({
         isLoading: false,
-        results: _.filter(this.getAllDishes(this.context[0]), isMatch)
+        results: lodash.filter(this.getAllDishes(this.context[0]), isMatch)
       });
     }, 300);
   };
@@ -81,7 +81,7 @@ export default class SearchExampleStandard extends Component {
               aligned={"left"}
               loading={isLoading}
               // onResultSelect={this.handleResultSelect}
-              onSearchChange={_.debounce(this.handleSearchChange, 500, {
+              onSearchChange={lodash.debounce(this.handleSearchChange, 500, {
                 leading: true
               })}
               results={results}
