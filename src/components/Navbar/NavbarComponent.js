@@ -5,10 +5,10 @@ import Media from "react-media";
 import MobileNavbarComponent from "./mobile/MobileNavbarComponent";
 import DesktopNavbarComponent from "./desktop/DesktopNavbarComponent";
 
-import { MenuContext } from "../context/menu-context";
+import { MenuContext } from "../../context/menu-context";
 
-const NavbarComponent = ({ menuItems }) => {
-  const [menu, setMenu] = useContext(MenuContext);
+const NavbarComponent = () => {
+  const [menu] = useContext(MenuContext);
 
   return (
     <div>

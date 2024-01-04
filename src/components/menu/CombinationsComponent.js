@@ -8,7 +8,7 @@ import {
   Item,
   Segment
 } from "semantic-ui-react";
-import { MenuContext } from "../context/menu-context";
+import { MenuContext } from "../../context/menu-context";
 import Media from "react-media";
 
 const CombinationsComponent = () => {
@@ -117,7 +117,7 @@ const CombinationsComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div style={{width: '30%'}}>
+              <div style={{ width: '30%' }}>
                 {getCombinations().map(dish => {
                   if (dish.image) {
                     return (

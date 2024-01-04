@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Modal, Header } from "semantic-ui-react";
-import MenuListComponenet from "../../components/menu/MenuListComponent";
+import MenuListComponenet from "./menu/MenuListComponent";
 import Media from "react-media";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const DesktopLandingV2 = (prop) => {
   const MenuStyle = {
@@ -26,7 +26,7 @@ const DesktopLandingV2 = (prop) => {
         </div>
       </div>
       <div className="flex justify-center text-lg text-center p-4">
-        SERVING AUTHENTIC CANTONESE STYLE CHINESE FOOD FOR 25 YEARS
+        SERVING AUTHENTIC CANTONESE STYLE CHINESE FOOD FOR 28 YEARS
       </div>
       <div className="flex justify-center text-black p-2">
         <div className="bg-white opacity-75 hover:opacity-100 p-4 px-12 ml-2">

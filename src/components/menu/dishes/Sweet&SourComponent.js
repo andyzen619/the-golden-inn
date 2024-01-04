@@ -2,7 +2,7 @@ import React, { useContext, Fragment } from "react";
 import { Segment, Card, Header, Item, Image, Popup } from "semantic-ui-react";
 import Media from "react-media";
 
-import { MenuContext } from "../../context/menu-context";
+import { MenuContext } from "../../../context/menu-context";
 
 const SweetAndSourComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);

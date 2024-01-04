@@ -2,7 +2,7 @@ import React, { useContext, Fragment } from "react";
 import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
 import Media from "react-media";
 
-import { MenuContext } from "../context/menu-context";
+import { MenuContext } from "../../context/menu-context";
 
 const CanadianComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
@@ -50,37 +50,37 @@ const CanadianComponent = () => {
           )}
           {!matches.mobile && (
             <Item.Group
-            style={{
-              background: "white",
-              padding: "5%",
-              boxShadow: "5px 5px 5px 5px black"
-            }}
-            divided
-          >
-            {getCanadianComponent().map(dish => {
-              return (
-                <Item key={dish.name}>
-                  {dish.image && <Image src={dish.image} size="small" />}
-                  <Card.Content>
-                    <Header
-                      as="h3"
-                      floated="right"
-                      color="green"
-                      style={{ fontWeight: "400" }}
-                    >
-                      {dish.price}
-                    </Header>
-                    <Item.Header>
-                      <Header as="h4">{dish.name}</Header>
-                    </Item.Header>
-                    {dish.description && (
-                      <Item.Meta>{dish.description}</Item.Meta>
-                    )}
-                  </Card.Content>
-                </Item>
-              );
-            })}
-          </Item.Group>
+              style={{
+                background: "white",
+                padding: "5%",
+                boxShadow: "5px 5px 5px 5px black"
+              }}
+              divided
+            >
+              {getCanadianComponent().map(dish => {
+                return (
+                  <Item key={dish.name}>
+                    {dish.image && <Image src={dish.image} size="small" />}
+                    <Card.Content>
+                      <Header
+                        as="h3"
+                        floated="right"
+                        color="green"
+                        style={{ fontWeight: "400" }}
+                      >
+                        {dish.price}
+                      </Header>
+                      <Item.Header>
+                        <Header as="h4">{dish.name}</Header>
+                      </Item.Header>
+                      {dish.description && (
+                        <Item.Meta>{dish.description}</Item.Meta>
+                      )}
+                    </Card.Content>
+                  </Item>
+                );
+              })}
+            </Item.Group>
           )}
         </Fragment>
       )}

@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Element } from "react-scroll";
+import { db } from '../context/menu-context';
 
 const daysOfTheWeek = [
-  { day: "Mon", hours: "Closed" },
-  { day: "Tue", hours: "11:30 a.m. – 09:00 p.m." },
-  { day: "Wed", hours: "11:30 a.m. – 09:00 p.m." },
-  { day: "Thurs", hours: "11:30 a.m. – 09:00 p.m." },
-  { day: "Fri", hours: "11:30 a.m. – 09:00 p.m." },
-  { day: "Sat", hours: "11:30 a.m. – 09:00 p.m." },
-  { day: "Sun", hours: "11:30 a.m. – 09:00 p.m." },
+  { day: "Mon", hours: "Closed", order: 1 },
+  { day: "Tue", hours: "11:30 a.m. – 09:00 p.m.", order: 2 },
+  { day: "Wed", hours: "11:30 a.m. – 09:00 p.m.", order: 3 },
+  { day: "Thurs", hours: "11:30 a.m. – 09:00 p.m.", order: 4 },
+  { day: "Fri", hours: "11:30 a.m. – 09:00 p.m.", order: 5 },
+  { day: "Sat", hours: "11:30 a.m. – 09:00 p.m.", order: 6 },
+  { day: "Sun", hours: "11:30 a.m. – 09:00 p.m.", order: 7 },
 ];
 
-const DesktopVisitUsV2 = (props) => {
+const VisitUs = () => {
+
+  const [daysOfTheWeek, setDaysOfTheWeek] = useState([]);
+
+  useEffect(() => {
+
+    db.collection("messages")
+      .doc("frontPageMessages")
+      .get()
+      .then((querySnapshot) => {
+        const { hoursOfOperation } = querySnapshot.data();
+
+        setDaysOfTheWeek(hoursOfOperation);
+      });
+
+
+  }, [])
+
   return (
     <div
       style={{ height: "600px" }}
@@ -31,11 +49,11 @@ const DesktopVisitUsV2 = (props) => {
           </div>
         </a>
       </div>
-      <div id="/visit_us" className="flex justify-center text-xl">
+      <div id="/visit_us" className="flex justify-center text-2xl">
         Hours of Operation
       </div>
 
-      <div className="flex justify-center text-lg">
+      <div className="flex justify-center  text-xl">
         <div className="flex flex-col justify-center">
           {daysOfTheWeek.map((item) => (
             <div className="flex justify-end p-2">
@@ -56,4 +74,4 @@ const DesktopVisitUsV2 = (props) => {
   );
 };
 
-export default DesktopVisitUsV2;
+export default VisitUs;

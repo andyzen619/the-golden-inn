@@ -7,7 +7,7 @@ import {
   Item,
   Segment,
 } from "semantic-ui-react";
-import { MenuContext } from "../../context/menu-context";
+import { MenuContext } from "../../../context/menu-context";
 import Media from "react-media";
 const CantoneseComponentComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
@@ -118,7 +118,7 @@ const CantoneseComponentComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div style={{width: '30%'}}>
+              <div style={{ width: '30%' }}>
                 {getCantoneseComponent().map(dish => {
                   if (dish.image) {
                     return (
