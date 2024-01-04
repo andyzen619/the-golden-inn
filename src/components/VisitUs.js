@@ -2,16 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Element } from "react-scroll";
 import { db } from '../context/menu-context';
 
-const daysOfTheWeek = [
-  { day: "Mon", hours: "Closed", order: 1 },
-  { day: "Tue", hours: "11:30 a.m. – 09:00 p.m.", order: 2 },
-  { day: "Wed", hours: "11:30 a.m. – 09:00 p.m.", order: 3 },
-  { day: "Thurs", hours: "11:30 a.m. – 09:00 p.m.", order: 4 },
-  { day: "Fri", hours: "11:30 a.m. – 09:00 p.m.", order: 5 },
-  { day: "Sat", hours: "11:30 a.m. – 09:00 p.m.", order: 6 },
-  { day: "Sun", hours: "11:30 a.m. – 09:00 p.m.", order: 7 },
-];
-
 const VisitUs = () => {
 
   const [daysOfTheWeek, setDaysOfTheWeek] = useState([]);
