@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import { Sidebar, Header, Segment } from "semantic-ui-react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Sidebar } from "semantic-ui-react";
 import SideBarComponent from "./DesktopSidebarComponent";
-import CombinationsComponent from "./MenuItems/CombinationsComponent";
 
 import DesktopMenuRouteComponent from "./DesktopMenuRoutesComponent";
 
 const DesktopMenuComponentStyle = {
   sidebarContainerStyle: {
-    height: "700px",
+    height: "100vh",
     backgroundImage: `linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
@@ -26,37 +25,12 @@ const DesktopMenuComponentStyle = {
 };
 
 const DesktopMenuComponent = () => {
-  const { sidebarContainerStyle, menuItemStyle } = DesktopMenuComponentStyle;
+  const { sidebarContainerStyle } = DesktopMenuComponentStyle;
 
-  const [isDefault, setIsDefault] = useState(true);
+  const [, setIsDefault] = useState(true);
 
   const setDefaultFalse = () => {
-    console.log("TURNING OFF DEFAULT");
     setIsDefault(false);
-  };
-
-  const getDefault = () => {
-    if (isDefault) {
-      return (
-        <div
-          style={{
-            position: "absolute",
-            zIndex: "10",
-            left: "20%",
-            // overflow: "auto",
-            height: "500px",
-            top: "8%"
-          }}
-        >
-          <Segment basic>
-            <Header as="h3">Special Combinations Plates</Header>
-          </Segment>
-          <div style={menuItemStyle}>
-            <CombinationsComponent />
-          </div>
-        </div>
-      );
-    }
   };
 
   return (

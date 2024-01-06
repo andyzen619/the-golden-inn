@@ -49,7 +49,6 @@ export default function App() {
             <Route exact path="/">
               <HomepageComponent />
             </Route>
-
             <Route path="/menu">
               <DesktopMenuComponent />
             </Route>
