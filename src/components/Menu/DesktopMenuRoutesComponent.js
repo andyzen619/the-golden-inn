@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Sidebar, Segment, div, Item } from "semantic-ui-react";
 import { Route, Switch } from "react-router-dom";
-import CombinationsComponent from "../../Menu/CombinationsComponent";
-import FullcourseComponenet from "../../Menu/FullCourseComponent";
-import SoupComponent from "../../Menu/dishes/SoupsComponent";
-import AppetizersComponent from "../../Menu/dishes/AppetizersComponent";
-import RiceComponent from "../../Menu/dishes/RiceComponent";
-import EggFooYoungComponent from "../../Menu/dishes/EggFooYoungComponent";
-import ChowMeinComponent from "../../Menu/dishes/ChowMeinComponent";
-import SweetAndSourComponent from "../../Menu/dishes/Sweet&SourComponent";
-import VegetablesAndAlmondsComponent from "../../Menu/dishes/VegetableAndAlmonds";
-import CantoneseComponent from "../../Menu/dishes/CantoneseComponent";
-import CanadianComponent from "../../Menu/CanadianDishesComponent";
+import CombinationsComponent from "./MenuItems/CombinationsComponent";
+import FullcourseComponenet from "./FullCourseComponent";
+import SoupComponent from "./MenuItems/SoupsComponent";
+import AppetizersComponent from "./MenuItems/AppetizersComponent";
+import RiceComponent from "./MenuItems/RiceComponent";
+import EggFooYoungComponent from "./MenuItems/EggFooYoungComponent";
+import ChowMeinComponent from "./MenuItems/ChowMeinComponent";
+import SweetAndSourComponent from "./MenuItems/Sweet&SourComponent";
+import VegetablesAndAlmondsComponent from "./MenuItems/VegetableAndAlmonds";
+import CantoneseComponent from "./MenuItems/CantoneseComponent";
+import CanadianComponent from "./MenuItems/CanadianDishesComponent";
 const menuRouteStyle = {
   menuItemStyle: {
     paddingLeft: "50px",

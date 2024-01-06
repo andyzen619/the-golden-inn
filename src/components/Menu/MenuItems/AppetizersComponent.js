@@ -1,16 +1,16 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header, Image, Item } from "semantic-ui-react";
 import Media from "react-media";
+import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
 
-import { MenuContext } from "../../../context/menu-context";
+import { MenuContext } from "../../../context/menuContext";
 
-const SoupsComponent = () => {
+const AppetizersComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getSoupsComponent = () => {
+  const getAppetizers = () => {
     if (menu.dishes) {
-      let SoupsComponent = menu.dishes.soups;
-      return Object.values(SoupsComponent);
+      let appetizers = menu.dishes.appetizers;
+      return Object.values(appetizers);
     } else {
       return [];
     }
@@ -22,7 +22,7 @@ const SoupsComponent = () => {
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getSoupsComponent().map(dish => {
+              {getAppetizers().map(dish => {
                 return (
                   <Segment key={dish.name}>
                     <Card.Content>
@@ -57,7 +57,7 @@ const SoupsComponent = () => {
               }}
               divided
             >
-              {getSoupsComponent().map(dish => {
+              {getAppetizers().map(dish => {
                 return (
                   <Item key={dish.name}>
                     {dish.image && <Image src={dish.image} size="small" />}
@@ -88,4 +88,4 @@ const SoupsComponent = () => {
   );
 };
 
-export default SoupsComponent;
+export default AppetizersComponent;

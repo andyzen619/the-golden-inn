@@ -1,16 +1,16 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header, Item, Image, Popup } from "semantic-ui-react";
+import { Segment, Card, Header, Image, Item, Popup } from "semantic-ui-react";
 import Media from "react-media";
 
-import { MenuContext } from "../../../context/menu-context";
+import { MenuContext } from "../../../context/menuContext";
 
-const SweetAndSourComponent = () => {
+const ChowMeinComponentComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getSweetAndSour = () => {
+  const getChowMeinComponent = () => {
     if (menu.dishes) {
-      let SweetAndSour = menu.dishes["sweet&Sour"];
-      return Object.values(SweetAndSour);
+      let ChowMeinComponent = menu.dishes.chowMein;
+      return Object.values(ChowMeinComponent);
     } else {
       return [];
     }
@@ -22,7 +22,7 @@ const SweetAndSourComponent = () => {
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getSweetAndSour().map(dish => {
+              {getChowMeinComponent().map(dish => {
                 return (
                   <Segment key={dish.name}>
                     {dish.image && (
@@ -71,7 +71,6 @@ const SweetAndSourComponent = () => {
                 justifyContent: "space-evenly"
               }}
             >
-              {" "}
               <Item.Group
                 style={{
                   background: "white",
@@ -81,7 +80,7 @@ const SweetAndSourComponent = () => {
                 }}
                 divided
               >
-                {getSweetAndSour().map(dish => {
+                {getChowMeinComponent().map(dish => {
                   return (
                     <Item key={dish.name}>
                       <Card.Content>
@@ -105,7 +104,7 @@ const SweetAndSourComponent = () => {
                 })}
               </Item.Group>
               <div style={{ width: "30%" }}>
-                {getSweetAndSour().map(dish => {
+                {getChowMeinComponent().map(dish => {
                   if (dish.image) {
                     return (
                       <Image
@@ -136,4 +135,4 @@ const SweetAndSourComponent = () => {
   );
 };
 
-export default SweetAndSourComponent;
+export default ChowMeinComponentComponent;
