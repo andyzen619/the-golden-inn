@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Element } from "react-scroll";
-import { db } from '../context/menu-context';
+import { db } from '../firebase';
 
 const VisitUs = () => {
 

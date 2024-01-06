@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactGA from "react-ga";
 import { Message } from "semantic-ui-react";
 
+import { db } from './firebase'
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
 import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
 import DesktopLanding from "./components/Landing";
 import DesktopVisitUs from "./components/VisitUs";
-import { MenuItemContextProvider, db } from "./context/menu-context";
+import { MenuItemContextProvider } from "./context/menu-context";
 import { AppStyle } from './constants';
 
 export default function App() {
