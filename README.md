@@ -22,3 +22,9 @@ A revamp of a old Go-daddy website using react and react router. Main purpose of
 1. Create PR to master.
 2. Review, approve, merge.
 3. Check GH actions build trigger.
+## Manual Deployment
+1. Run `npm predeploy`
+2. Run `npm deploy`
+## Testing
+1. Running tests and output html reporting `npx playwright test` and then `npx playwright show-report`
+2. Running test in UI mode `npx playwright test --ui`
