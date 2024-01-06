@@ -3,7 +3,7 @@ import { Responsive, Menu } from "semantic-ui-react";
 import Media from "react-media";
 
 import MenuComponent from "./MobileMenuComponent";
-import MenuSearchComponent from "../MenuSearchComponent";
+import MenuSearchComponent from "./MenuSearchComponent";
 
 const SmallMobileComponent = () => {
   return (

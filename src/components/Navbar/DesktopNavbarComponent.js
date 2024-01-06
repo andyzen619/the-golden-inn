@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "semantic-ui-react";
-import MenuSearchComponent from "../MenuSearchComponent";
+import MenuSearchComponent from "./MenuSearchComponent";
 import Scroll from "react-scroll";
 import { Link } from "react-router-dom";
 

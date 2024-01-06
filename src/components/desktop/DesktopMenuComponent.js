@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Sidebar, Header, Segment } from "semantic-ui-react";
 import SideBarComponent from "../desktop/menu/SidebarComponent";
-import CombinationsComponent from "../menu/CombinationsComponent";
+import CombinationsComponent from "../Menu/CombinationsComponent";
 
 import DesktopMenuRouteComponent from "./menu/DesktopMenuRoutesComponent";
 
