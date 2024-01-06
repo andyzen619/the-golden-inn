@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Sidebar, Accordion, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-const SidebarComponent = ({setDefaultFalse}) => {
+const SidebarComponent = ({ setDefaultFalse }) => {
   const [activeIndex, setActiveIndeex] = useState(0);
 
   const handleClick = (e, titleProps) => {
@@ -19,7 +19,7 @@ const SidebarComponent = ({setDefaultFalse}) => {
       vertical
       visible={true}
       styled
-      style={{background: '#f0f0f0'}}
+      style={{ background: '#f0f0f0' }}
     >
       <Link to="/menu/combinations">
         <Accordion.Title onClick={setDefaultFalse}>

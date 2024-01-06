@@ -26,7 +26,7 @@ const DesktopMenuRoutesComponent = () => {
   const { menuItemStyle } = menuRouteStyle;
 
   return (
-    <Sidebar.Pusher style={{ padding: " 2% 5%", overflow: "auto" }} className='text-white'>
+    <Sidebar.Pusher style={{ padding: " 2% 5%", overflow: "auto", }} className='text-white'>
       <Switch>
         <Route exact path="/menu">
           <Segment basic>
