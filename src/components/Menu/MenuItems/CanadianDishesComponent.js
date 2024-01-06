@@ -1,16 +1,16 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header, Image, Item } from "semantic-ui-react";
+import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
 import Media from "react-media";
 
-import { MenuContext } from "../../../context/menu-context";
+import { MenuContext } from "../../../context/menuContext";
 
-const VegtablesAndAlmondsComponent = () => {
+const CanadianComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getVegtablesAndAlmonds = () => {
+  const getCanadianComponent = () => {
     if (menu.dishes) {
-      let VegtablesAndAlmonds = menu.dishes.vA;
-      return Object.values(VegtablesAndAlmonds);
+      let CanadianComponent = menu.dishes.canadian;
+      return Object.values(CanadianComponent);
     } else {
       return [];
     }
@@ -22,7 +22,7 @@ const VegtablesAndAlmondsComponent = () => {
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getVegtablesAndAlmonds().map(dish => {
+              {getCanadianComponent().map(dish => {
                 return (
                   <Segment key={dish.name}>
                     <Card.Content>
@@ -57,7 +57,7 @@ const VegtablesAndAlmondsComponent = () => {
               }}
               divided
             >
-              {getVegtablesAndAlmonds().map(dish => {
+              {getCanadianComponent().map(dish => {
                 return (
                   <Item key={dish.name}>
                     {dish.image && <Image src={dish.image} size="small" />}
@@ -88,4 +88,4 @@ const VegtablesAndAlmondsComponent = () => {
   );
 };
 
-export default VegtablesAndAlmondsComponent;
+export default CanadianComponent;

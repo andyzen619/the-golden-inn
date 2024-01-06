@@ -1,16 +1,16 @@
 import React, { useContext, Fragment } from "react";
-import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
-import Media from 'react-media';
+import { Segment, Card, Header, Image, Item } from "semantic-ui-react";
+import Media from "react-media";
 
-import { MenuContext } from "../../../context/menu-context";
+import { MenuContext } from "../../../context/menuContext";
 
-const RiceComponent = () => {
+const SoupsComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getRice = () => {
+  const getSoupsComponent = () => {
     if (menu.dishes) {
-      let Rice = menu.dishes.Rice;
-      return Object.values(Rice);
+      let SoupsComponent = menu.dishes.soups;
+      return Object.values(SoupsComponent);
     } else {
       return [];
     }
@@ -22,7 +22,7 @@ const RiceComponent = () => {
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getRice().map(dish => {
+              {getSoupsComponent().map(dish => {
                 return (
                   <Segment key={dish.name}>
                     <Card.Content>
@@ -57,7 +57,7 @@ const RiceComponent = () => {
               }}
               divided
             >
-              {getRice().map(dish => {
+              {getSoupsComponent().map(dish => {
                 return (
                   <Item key={dish.name}>
                     {dish.image && <Image src={dish.image} size="small" />}
@@ -88,4 +88,4 @@ const RiceComponent = () => {
   );
 };
 
-export default RiceComponent;
+export default SoupsComponent;

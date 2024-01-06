@@ -6,10 +6,10 @@ import { Message } from "semantic-ui-react";
 import { db } from './firebase'
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
-import DesktopMenuComponent from "./components/desktop/DesktopMenuComponent";
+import DesktopMenuComponent from "./components/Menu/DesktopMenuComponent";
 import DesktopLanding from "./components/Landing";
 import DesktopVisitUs from "./components/VisitUs";
-import { MenuItemContextProvider } from "./context/menu-context";
+import { MenuItemContextProvider } from "./context/menuContext";
 import { AppStyle } from './constants';
 
 export default function App() {

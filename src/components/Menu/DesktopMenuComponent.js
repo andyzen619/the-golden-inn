@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Sidebar, Header, Segment } from "semantic-ui-react";
-import SideBarComponent from "../desktop/menu/SidebarComponent";
-import CombinationsComponent from "../Menu/CombinationsComponent";
+import SideBarComponent from "./DesktopSidebarComponent";
+import CombinationsComponent from "./MenuItems/CombinationsComponent";
 
-import DesktopMenuRouteComponent from "./menu/DesktopMenuRoutesComponent";
+import DesktopMenuRouteComponent from "./DesktopMenuRoutesComponent";
 
 const DesktopMenuComponentStyle = {
   sidebarContainerStyle: {

@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import "./MenuListComponent.css";
 import { Accordion, Icon, Header } from "semantic-ui-react";
 
-import AppetizersComponent from "./dishes/AppetizersComponent";
-import RiceComponent from "./dishes/RiceComponent";
-import SweetAndSourComponent from "./dishes/Sweet&SourComponent";
-import EggFooYoungComponent from "./dishes/EggFooYoungComponent";
-import VegtablesAndAlmondsComponent from "./dishes/VegetableAndAlmonds";
-import ChowMeinComponentComponent from "./dishes/ChowMeinComponent";
-import CantoneseComponentComponent from "./dishes/CantoneseComponent";
-import SoupsComponent from "./dishes/SoupsComponent";
-import CombinationsComponent from "./CombinationsComponent";
+import AppetizersComponent from "./MenuItems/AppetizersComponent";
+import RiceComponent from "./MenuItems/RiceComponent";
+import SweetAndSourComponent from "./MenuItems/Sweet&SourComponent";
+import EggFooYoungComponent from "./MenuItems/EggFooYoungComponent";
+import VegtablesAndAlmondsComponent from "./MenuItems/VegetableAndAlmonds";
+import ChowMeinComponentComponent from "./MenuItems/ChowMeinComponent";
+import CantoneseComponentComponent from "./MenuItems/CantoneseComponent";
+import SoupsComponent from "./MenuItems/SoupsComponent";
+import CombinationsComponent from "./MenuItems/CombinationsComponent";
 import DinnersComponent from "./FullCourseComponent";
-import CanadianComponent from "./CanadianDishesComponent";
+import CanadianComponent from "./MenuItems/CanadianDishesComponent";
 
 const MenuListComponenet = () => {
   const [activeIndex, setActiveIndex] = useState(-1);

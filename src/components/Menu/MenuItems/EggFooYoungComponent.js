@@ -1,16 +1,16 @@
 import React, { useContext, Fragment } from "react";
-import Media from "react-media";
 import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
+import Media from "react-media";
 
-import { MenuContext } from "../../../context/menu-context";
+import { MenuContext } from "../../../context/menuContext";
 
-const AppetizersComponent = () => {
+const EggFooYoungComponent = () => {
   const [menu, setMenu] = useContext(MenuContext);
 
-  const getAppetizers = () => {
+  const getEggFooYoung = () => {
     if (menu.dishes) {
-      let appetizers = menu.dishes.appetizers;
-      return Object.values(appetizers);
+      let EggFooYoung = menu.dishes.eggFooYoung;
+      return Object.values(EggFooYoung);
     } else {
       return [];
     }
@@ -22,7 +22,7 @@ const AppetizersComponent = () => {
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getAppetizers().map(dish => {
+              {getEggFooYoung().map(dish => {
                 return (
                   <Segment key={dish.name}>
                     <Card.Content>
@@ -57,7 +57,7 @@ const AppetizersComponent = () => {
               }}
               divided
             >
-              {getAppetizers().map(dish => {
+              {getEggFooYoung().map(dish => {
                 return (
                   <Item key={dish.name}>
                     {dish.image && <Image src={dish.image} size="small" />}
@@ -88,4 +88,4 @@ const AppetizersComponent = () => {
   );
 };
 
-export default AppetizersComponent;
+export default EggFooYoungComponent;
