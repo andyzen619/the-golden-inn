@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import firebase from "firebase";
-
-// Initialize Cloud Firestore through Firebase
-firebase.initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIRE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-});
-
-export const db = firebase.firestore();
+import { db } from '../firebase';
 
 const MenuContext = React.createContext([{}, () => { }]);
 
