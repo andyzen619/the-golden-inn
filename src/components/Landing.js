@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Modal, Header } from "semantic-ui-react";
-import MenuListComponenet from "./menu/MenuListComponent";
+import MenuListComponenet from "./Menu/MenuListComponent";
 import Media from "react-media";
 import { Link } from 'react-router-dom'
 

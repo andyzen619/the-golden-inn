@@ -2,7 +2,7 @@ import lodash from "lodash";
 import React, { Component, } from "react";
 import { Search, Grid } from "semantic-ui-react";
 import { MenuContext } from "../../context/menu-context";
-import './MenuSearchStyle.css'
+import './MenuSearchComponent.css'
 
 const style = {
   position: "relative"

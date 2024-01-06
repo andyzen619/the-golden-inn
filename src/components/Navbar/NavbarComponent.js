@@ -2,8 +2,8 @@ import React, { useContext, Fragment } from "react";
 import { Segment } from "semantic-ui-react";
 import Media from "react-media";
 
-import MobileNavbarComponent from "./mobile/MobileNavbarComponent";
-import DesktopNavbarComponent from "./desktop/DesktopNavbarComponent";
+import MobileNavbarComponent from "./MobileNavbarComponent";
+import DesktopNavbarComponent from "./DesktopNavbarComponent";
 
 import { MenuContext } from "../../context/menu-context";
 
