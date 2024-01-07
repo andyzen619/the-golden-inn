@@ -5,7 +5,7 @@ import Media from "react-media";
 import { MenuContext } from "../../../context/menuContext";
 
 const VegtablesAndAlmondsComponent = () => {
-  const [menu, setMenu] = useContext(MenuContext);
+  const [menu] = useContext(MenuContext);
 
   const getVegtablesAndAlmonds = () => {
     if (menu.dishes) {
@@ -18,11 +18,11 @@ const VegtablesAndAlmondsComponent = () => {
 
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
-      {matches => (
+      {(matches) => (
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getVegtablesAndAlmonds().map(dish => {
+              {getVegtablesAndAlmonds().map((dish) => {
                 return (
                   <Segment key={dish.name}>
                     <Card.Content>
@@ -53,11 +53,11 @@ const VegtablesAndAlmondsComponent = () => {
               style={{
                 background: "white",
                 padding: "5%",
-                boxShadow: "5px 5px 5px 5px black"
+                boxShadow: "5px 5px 5px 5px black",
               }}
               divided
             >
-              {getVegtablesAndAlmonds().map(dish => {
+              {getVegtablesAndAlmonds().map((dish) => {
                 return (
                   <Item key={dish.name}>
                     {dish.image && <Image src={dish.image} size="small" />}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Sidebar, Segment, div, Item } from "semantic-ui-react";
 import { Route, Switch } from "react-router-dom";
 import CombinationsComponent from "./MenuItems/CombinationsComponent";
@@ -18,19 +18,22 @@ const menuRouteStyle = {
     paddingRight: "300px",
     paddingTop: "50px",
     paddingBottom: "50px",
-    height: "450px"
-  }
+    height: "450px",
+  },
 };
 
 const DesktopMenuRoutesComponent = () => {
   const { menuItemStyle } = menuRouteStyle;
 
   return (
-    <Sidebar.Pusher style={{ padding: " 2% 5%", overflow: "auto", }} className='text-white'>
+    <Sidebar.Pusher
+      style={{ padding: " 2% 5%", overflow: "auto" }}
+      className="text-white"
+    >
       <Switch>
         <Route exact path="/menu">
           <Segment basic>
-            <div className='text-4xl py-8'>Special Combinations Plates</div>
+            <div className="text-4xl py-8">Special Combinations Plates</div>
             <Item.Meta>
               No substitutions within combinations plates. Get $1 off betwean
               11:30am-2pm
@@ -43,7 +46,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/combinations">
           <Segment basic>
-            <div className='text-4xl py-8'>Special Combinations Plates</div>
+            <div className="text-4xl py-8">Special Combinations Plates</div>
             <Item.Meta>
               No substitutions within combinations plates. Get $1 off betwean
               11:30am-2pm
@@ -56,7 +59,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/fullcourse">
           <Segment basic>
-            <div className='text-4xl py-8'>Full Course Meals</div>
+            <div className="text-4xl py-8">Full Course Meals</div>
             <Item.Meta>
               Appetizers cannot be substituted. Other substitutions require
               minimum $2.00 charge**.
@@ -69,7 +72,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/soups">
           <Segment basic>
-            <div className='text-4xl py-8'>Soups</div>
+            <div className="text-4xl py-8">Soups</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -80,7 +83,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/appetizers">
           <Segment basic>
-            <div className='text-4xl py-8'>Appetizers</div>
+            <div className="text-4xl py-8">Appetizers</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -91,7 +94,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/rice">
           <Segment basic>
-            <div className='text-4xl py-8'>Rice (One size only)</div>
+            <div className="text-4xl py-8">Rice (One size only)</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -102,7 +105,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/eggFooYoung">
           <Segment basic>
-            <div className='text-4xl py-8'>Egg Foo Young (Grilled)</div>
+            <div className="text-4xl py-8">Egg Foo Young (Grilled)</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -113,7 +116,9 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/chowMein">
           <Segment basic>
-            <div className='text-4xl py-8'>Chow Mein (Dry noodles)/Chop Suey</div>
+            <div className="text-4xl py-8">
+              Chow Mein (Dry noodles)/Chop Suey
+            </div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -124,7 +129,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/sweetAndSour">
           <Segment basic>
-            <div className='text-4xl py-8'>Sweet and Sour</div>
+            <div className="text-4xl py-8">Sweet and Sour</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -135,7 +140,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/vegtablesAndAlmonds">
           <Segment basic>
-            <div className='text-4xl py-8'>Vegetables and Almonds</div>
+            <div className="text-4xl py-8">Vegetables and Almonds</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -146,7 +151,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/cantonese">
           <Segment basic>
-            <div className='text-4xl py-8'>Cantonese Style</div>
+            <div className="text-4xl py-8">Cantonese Style</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>
@@ -157,7 +162,7 @@ const DesktopMenuRoutesComponent = () => {
         </Route>
         <Route path="/menu/canadian">
           <Segment basic>
-            <div className='text-4xl py-8'>Canadian Dishes</div>
+            <div className="text-4xl py-8">Canadian Dishes</div>
             <Item.Meta>
               <div>Prices are subject to change.**</div>
             </Item.Meta>

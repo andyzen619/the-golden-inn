@@ -139,7 +139,6 @@ const MenuListComponenet = () => {
         as={Header}
         index={8}
         onClick={handleClick}
-        as={Header}
       >
         <Icon name="dropdown" />
         Cantonese Style

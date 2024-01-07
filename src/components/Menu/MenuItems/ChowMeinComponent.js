@@ -5,7 +5,7 @@ import Media from "react-media";
 import { MenuContext } from "../../../context/menuContext";
 
 const ChowMeinComponentComponent = () => {
-  const [menu, setMenu] = useContext(MenuContext);
+  const [menu] = useContext(MenuContext);
 
   const getChowMeinComponent = () => {
     if (menu.dishes) {
@@ -18,11 +18,11 @@ const ChowMeinComponentComponent = () => {
 
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
-      {matches => (
+      {(matches) => (
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getChowMeinComponent().map(dish => {
+              {getChowMeinComponent().map((dish) => {
                 return (
                   <Segment key={dish.name}>
                     {dish.image && (
@@ -68,7 +68,7 @@ const ChowMeinComponentComponent = () => {
             <div
               style={{
                 display: "flex",
-                justifyContent: "space-evenly"
+                justifyContent: "space-evenly",
               }}
             >
               <Item.Group
@@ -76,11 +76,11 @@ const ChowMeinComponentComponent = () => {
                   background: "white",
                   padding: "5%",
                   boxShadow: "5px 5px 5px 5px black",
-                  width: "60%"
+                  width: "60%",
                 }}
                 divided
               >
-                {getChowMeinComponent().map(dish => {
+                {getChowMeinComponent().map((dish) => {
                   return (
                     <Item key={dish.name}>
                       <Card.Content>
@@ -104,27 +104,27 @@ const ChowMeinComponentComponent = () => {
                 })}
               </Item.Group>
               <div style={{ width: "30%" }}>
-                {getChowMeinComponent().map(dish => {
-                  if (dish.image) {
-                    return (
+                {getChowMeinComponent().map((dish) => {
+                  return (
+                    dish.image && (
                       <Image
                         src={dish.image}
                         size="large"
                         rounded
                         style={{
                           margin: "50px",
-                          borderRadius: "25px"
+                          borderRadius: "25px",
                         }}
                         label={{
                           color: "brown",
                           content: dish.name,
                           icon: "food",
                           ribbon: "right",
-                          size: "large"
+                          size: "large",
                         }}
                       />
-                    );
-                  }
+                    )
+                  );
                 })}
               </div>
             </div>

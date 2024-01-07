@@ -1,16 +1,9 @@
 import React, { useContext, Fragment } from "react";
-import {
-  Card,
-  Header,
-  Image,
-  Popup,
-  Item,
-  Segment,
-} from "semantic-ui-react";
+import { Card, Header, Image, Popup, Item, Segment } from "semantic-ui-react";
 import { MenuContext } from "../../../context/menuContext";
 import Media from "react-media";
 const CantoneseComponentComponent = () => {
-  const [menu, setMenu] = useContext(MenuContext);
+  const [menu] = useContext(MenuContext);
 
   const getCantoneseComponent = () => {
     if (menu.dishes) {
@@ -23,11 +16,11 @@ const CantoneseComponentComponent = () => {
 
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
-      {matches => (
+      {(matches) => (
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getCantoneseComponent().map(dish => {
+              {getCantoneseComponent().map((dish) => {
                 return (
                   <Segment key={dish.name}>
                     {dish.image && (
@@ -53,7 +46,7 @@ const CantoneseComponentComponent = () => {
                         textAlign="center"
                         color="green"
                         style={{
-                          fontWeight: "400"
+                          fontWeight: "400",
                         }}
                       >
                         {dish.price}
@@ -67,7 +60,7 @@ const CantoneseComponentComponent = () => {
                           color="grey"
                           style={{
                             display: "flex",
-                            justifyContent: "space-between"
+                            justifyContent: "space-between",
                           }}
                         >
                           {dish.description}
@@ -83,7 +76,7 @@ const CantoneseComponentComponent = () => {
             <div
               style={{
                 display: "flex",
-                justifyContent: "space-evenly"
+                justifyContent: "space-evenly",
               }}
             >
               <Item.Group
@@ -91,11 +84,11 @@ const CantoneseComponentComponent = () => {
                   background: "white",
                   padding: "5%",
                   boxShadow: "5px 5px 5px 5px black",
-                  width: "60%"
+                  width: "60%",
                 }}
                 divided
               >
-                {getCantoneseComponent().map(dish => {
+                {getCantoneseComponent().map((dish) => {
                   return (
                     <Item key={dish.name}>
                       <Card.Content>
@@ -118,10 +111,10 @@ const CantoneseComponentComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div style={{ width: '30%' }}>
-                {getCantoneseComponent().map(dish => {
-                  if (dish.image) {
-                    return (
+              <div style={{ width: "30%" }}>
+                {getCantoneseComponent().map((dish) => {
+                  return (
+                    dish.image && (
                       <Image
                         src={dish.image}
                         size="large"
@@ -135,11 +128,11 @@ const CantoneseComponentComponent = () => {
                           content: dish.name,
                           icon: "food",
                           ribbon: "right",
-                          size: "large"
+                          size: "large",
                         }}
                       />
-                    );
-                  }
+                    )
+                  );
                 })}
               </div>
             </div>

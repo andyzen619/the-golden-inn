@@ -1,11 +1,11 @@
 import React, { useContext, Fragment } from "react";
 import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
-import Media from 'react-media';
+import Media from "react-media";
 
 import { MenuContext } from "../../../context/menuContext";
 
 const RiceComponent = () => {
-  const [menu, setMenu] = useContext(MenuContext);
+  const [menu] = useContext(MenuContext);
 
   const getRice = () => {
     if (menu.dishes) {
@@ -18,11 +18,11 @@ const RiceComponent = () => {
 
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
-      {matches => (
+      {(matches) => (
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getRice().map(dish => {
+              {getRice().map((dish) => {
                 return (
                   <Segment key={dish.name}>
                     <Card.Content>
@@ -53,11 +53,11 @@ const RiceComponent = () => {
               style={{
                 background: "white",
                 padding: "5%",
-                boxShadow: "5px 5px 5px 5px black"
+                boxShadow: "5px 5px 5px 5px black",
               }}
               divided
             >
-              {getRice().map(dish => {
+              {getRice().map((dish) => {
                 return (
                   <Item key={dish.name}>
                     {dish.image && <Image src={dish.image} size="small" />}
