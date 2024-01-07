@@ -1,11 +1,11 @@
-import React, { useState, Fragment, useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import { Segment, Card, Header, Item, Image } from "semantic-ui-react";
-import Media from 'react-media'
+import Media from "react-media";
 
 import { MenuContext } from "../../context/menuContext";
 
 const DinnersComponent = () => {
-  const [menu, setMenu] = useContext(MenuContext);
+  const [menu] = useContext(MenuContext);
 
   const getDinners = () => {
     if (menu.dinners) {
@@ -18,11 +18,11 @@ const DinnersComponent = () => {
 
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
-      {matches => (
+      {(matches) => (
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getDinners().map(dish => {
+              {getDinners().map((dish) => {
                 return (
                   <Segment key={dish.name}>
                     <Card.Content>
@@ -47,11 +47,17 @@ const DinnersComponent = () => {
                 );
               })}
             </Segment.Group>
-
           )}
           {!matches.mobile && (
-            <Item.Group style={{ background: "white", padding: "5%", boxShadow: '5px 5px 5px 5px black' }} divided>
-              {getDinners().map(dish => {
+            <Item.Group
+              style={{
+                background: "white",
+                padding: "5%",
+                boxShadow: "5px 5px 5px 5px black",
+              }}
+              divided
+            >
+              {getDinners().map((dish) => {
                 return (
                   <Item key={dish.name}>
                     {dish.image && <Image src={dish.image} size="small" />}
@@ -68,16 +74,13 @@ const DinnersComponent = () => {
                         <Header as="h4">{dish.name}</Header>
                       </Item.Header>
                       {dish.description && (
-                        <Item.Meta>
-                          {dish.description}
-                        </Item.Meta>
+                        <Item.Meta>{dish.description}</Item.Meta>
                       )}
                     </Card.Content>
                   </Item>
                 );
               })}
             </Item.Group>
-
           )}
         </Fragment>
       )}

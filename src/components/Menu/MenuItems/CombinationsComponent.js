@@ -1,18 +1,10 @@
 import React, { Fragment, useContext } from "react";
-import {
-  Card,
-  Header,
-  List,
-  Image,
-  Popup,
-  Item,
-  Segment
-} from "semantic-ui-react";
+import { Card, Header, Image, Popup, Item, Segment } from "semantic-ui-react";
 import { MenuContext } from "../../../context/menuContext";
 import Media from "react-media";
 
 const CombinationsComponent = () => {
-  const [menu, setMenu] = useContext(MenuContext);
+  const [menu] = useContext(MenuContext);
 
   const getCombinations = () => {
     if (menu.combinations) {
@@ -25,11 +17,11 @@ const CombinationsComponent = () => {
 
   return (
     <Media queries={{ mobile: "(max-width: 467px)" }}>
-      {matches => (
+      {(matches) => (
         <Fragment>
           {matches.mobile && (
             <Segment.Group>
-              {getCombinations().map(dish => {
+              {getCombinations().map((dish) => {
                 return (
                   <Segment key={dish.name}>
                     {dish.image && (
@@ -66,7 +58,7 @@ const CombinationsComponent = () => {
                           color="grey"
                           style={{
                             display: "flex",
-                            justifyContent: "space-between"
+                            justifyContent: "space-between",
                           }}
                         >
                           {dish.description}
@@ -82,7 +74,7 @@ const CombinationsComponent = () => {
             <div
               style={{
                 display: "flex",
-                justifyContent: "space-evenly"
+                justifyContent: "space-evenly",
               }}
             >
               <Item.Group
@@ -90,11 +82,11 @@ const CombinationsComponent = () => {
                   background: "white",
                   padding: "5%",
                   boxShadow: "5px 5px 5px 5px black",
-                  width: "80%"
+                  width: "80%",
                 }}
                 divided
               >
-                {getCombinations().map(dish => {
+                {getCombinations().map((dish) => {
                   return (
                     <Item key={dish.name}>
                       <Card.Content>
@@ -117,10 +109,10 @@ const CombinationsComponent = () => {
                   );
                 })}
               </Item.Group>
-              <div style={{ width: '30%' }}>
-                {getCombinations().map(dish => {
-                  if (dish.image) {
-                    return (
+              <div style={{ width: "30%" }}>
+                {getCombinations().map((dish) => {
+                  return (
+                    dish.image && (
                       <Image
                         src={dish.image}
                         size="large"
@@ -134,11 +126,11 @@ const CombinationsComponent = () => {
                           content: dish.name,
                           icon: "food",
                           ribbon: "right",
-                          size: "large"
+                          size: "large",
                         }}
                       />
-                    );
-                  }
+                    )
+                  );
                 })}
               </div>
             </div>
