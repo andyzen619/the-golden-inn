@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { db } from '../firebase';
+import { collection, getDocs } from "firebase/firestore";
 
-const MenuContext = React.createContext([{}, () => { }]);
+import { db } from "../firebase";
+
+const MenuContext = React.createContext([{}, () => {}]);
 
 const MenuItemContextProvider = (props) => {
   const [menu, setMenu] = useState({});
 
   useEffect(() => {
-    db.collection("menu-items")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          setMenu(doc.data());
-        });
+    const ref = collection(db, "menu-items");
+
+    getDocs(ref).then((querySnapshot) => {
+      querySnapshot.docs.forEach((doc) => {
+        setMenu(doc.data());
       });
+    });
   }, []);
   return (
     <MenuContext.Provider value={[menu, setMenu]}>

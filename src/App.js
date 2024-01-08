@@ -2,15 +2,16 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactGA from "react-ga";
 import { Message } from "semantic-ui-react";
+import { doc, getDoc } from "firebase/firestore";
 
-import { db } from './firebase'
+import { db } from "./firebase";
 import NavBarComponent from "./components/Navbar/NavbarComponent";
 import MapComponent from "./components/MapComponent";
 import DesktopMenuComponent from "./components/Menu/DesktopMenuComponent";
 import DesktopLanding from "./components/Landing";
 import DesktopVisitUs from "./components/VisitUs";
 import { MenuItemContextProvider } from "./context/menuContext";
-import { AppStyle } from './constants';
+import { AppStyle } from "./constants";
 
 export default function App() {
   const [banner, setBanner] = useState({
@@ -20,18 +21,17 @@ export default function App() {
   });
 
   useEffect(() => {
-    db.collection("messages")
-      .doc("bannerMessage")
-      .get()
-      .then((querySnapshot) => {
-        const { message, title, visible } = querySnapshot.data();
+    const ref = doc(db, "messages", "bannerMessage");
 
-        setBanner({
-          message,
-          title,
-          visible,
-        });
+    getDoc(ref).then((querySnapshot) => {
+      const { message, title, visible } = querySnapshot.data();
+
+      setBanner({
+        message,
+        title,
+        visible,
       });
+    });
   }, []);
 
   return (
@@ -77,5 +77,4 @@ function HomepageComponent() {
       <MapComponent />
     </div>
   );
-};
-
+}
