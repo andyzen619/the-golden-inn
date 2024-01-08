@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Element } from "react-scroll";
-import { db } from '../firebase';
+import { doc, getDoc } from "firebase/firestore";
+
+import { db } from "../firebase";
 
 const VisitUs = () => {
-
   const [daysOfTheWeek, setDaysOfTheWeek] = useState([]);
 
   useEffect(() => {
+    const ref = doc(db, "messages", "frontPageMessages");
 
-    db.collection("messages")
-      .doc("frontPageMessages")
-      .get()
-      .then((querySnapshot) => {
-        const { hoursOfOperation } = querySnapshot.data();
+    getDoc(ref).then((querySnapshot) => {
+      const { hoursOfOperation } = querySnapshot.data();
 
-        setDaysOfTheWeek(hoursOfOperation);
-      });
-
-
-  }, [])
+      setDaysOfTheWeek(hoursOfOperation);
+    });
+  }, []);
 
   return (
     <div
@@ -46,7 +43,7 @@ const VisitUs = () => {
       <div className="flex justify-center  text-xl">
         <div className="flex flex-col justify-center">
           {daysOfTheWeek.map((item) => (
-            <div className="flex justify-end p-2">
+            <div key={item.order} className="flex justify-end p-2">
               <div>{item.day}</div>
             </div>
           ))}
@@ -54,7 +51,7 @@ const VisitUs = () => {
         <div className="w-12" />
         <div className="flex flex-col justify-center">
           {daysOfTheWeek.map((item) => (
-            <div className="flex justify-center p-2">
+            <div key={item.order} className="flex justify-center p-2">
               <div>{item.hours}</div>
             </div>
           ))}
