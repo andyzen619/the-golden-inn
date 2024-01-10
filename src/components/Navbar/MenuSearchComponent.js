@@ -1,12 +1,11 @@
 import lodash from "lodash";
-import React, { Component, } from "react";
+import React, { Component } from "react";
 import { Search, Grid } from "semantic-ui-react";
 import { MenuContext } from "../../context/menuContext";
 
 const style = {
-  position: "relative"
+  position: "relative",
 };
-
 
 const initialState = { isLoading: false, results: [], value: "" };
 
@@ -14,35 +13,35 @@ export default class SearchExampleStandard extends Component {
   state = initialState;
   static contextType = MenuContext;
 
-  getAllDishes = menu => {
+  getAllDishes = (menu) => {
     const allDishes = menu.dishes;
     const allCombinations = menu.combinations;
     const allDinners = menu.dinners;
     const result = [];
 
-    Object.values(allDishes).forEach(value => {
-      Object.values(value).forEach(dish => {
+    Object.values(allDishes).forEach((value) => {
+      Object.values(value).forEach((dish) => {
         const newDishObj = {
           title: dish.name,
           description: dish.description,
-          price: dish.price
+          price: dish.price,
         };
         result.push(newDishObj);
       });
     });
-    Object.values(allCombinations).forEach(dish => {
+    Object.values(allCombinations).forEach((dish) => {
       const newDishObj = {
         title: dish.name,
         description: dish.description,
-        price: dish.price
+        price: dish.price,
       };
       result.push(newDishObj);
     });
-    Object.values(allDinners).forEach(dish => {
+    Object.values(allDinners).forEach((dish) => {
       const newDishObj = {
         title: dish.name,
         description: dish.description,
-        price: dish.price
+        price: dish.price,
       };
       result.push(newDishObj);
     });
@@ -61,11 +60,11 @@ export default class SearchExampleStandard extends Component {
       }
 
       const re = new RegExp(lodash.escapeRegExp(this.state.value), "i");
-      const isMatch = result => re.test(result.title);
+      const isMatch = (result) => re.test(result.title);
 
       this.setState({
         isLoading: false,
-        results: lodash.filter(this.getAllDishes(this.context[0]), isMatch)
+        results: lodash.filter(this.getAllDishes(this.context[0]), isMatch),
       });
     }, 300);
   };
@@ -75,18 +74,18 @@ export default class SearchExampleStandard extends Component {
     return (
       <Grid>
         <Grid.Column width={4} style={style}>
-          <div>
+          <div data-testid="searchBar">
             <Search
               aligned={"left"}
               loading={isLoading}
               // onResultSelect={this.handleResultSelect}
               onSearchChange={lodash.debounce(this.handleSearchChange, 500, {
-                leading: true
+                leading: true,
               })}
               results={results}
               value={value}
               {...this.props}
-            ></Search>
+            />
           </div>
         </Grid.Column>
       </Grid>
