@@ -26,7 +26,8 @@
     "deploy": "gh-pages -d build",
     "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
     "start": "npm run build:style && react-scripts start",
-    "build": "CI=false react-scripts build"
+    "build": "CI=false react-scripts build",
+    "test": "npx playwright test"
   },
   "eslintConfig": {
     "extends": [
