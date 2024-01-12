@@ -47,7 +47,6 @@ const MenuListComponenet = () => {
       >
         <Icon name="dropdown" />
         Full Course Dinner
-        {/* <Header sub as='h6' style={{width: '300px'}}>Any substitutions incur a minimum $2.00 charge **</Header> */}
       </Accordion.Title>
       <Accordion.Content active={activeIndex === 1}>
         <h6 style={{ margin: 0, left: "15px", position: "relative" }}>
