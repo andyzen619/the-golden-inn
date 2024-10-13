@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Modal, Header } from "semantic-ui-react";
 import MenuListComponenet from "./Menu/MenuListComponent";
 import Media from "react-media";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const DesktopLandingV2 = (prop) => {
   const MenuStyle = {
@@ -21,7 +21,9 @@ const DesktopLandingV2 = (prop) => {
           style={{ backgroundColor: "#b82e26" }}
           className="px-8 py-24 rounded-full text-4xl opacity-75"
         >
-          <div className="flex justify-center text-white opacity-100">GOLDEN INN</div>
+          <div className="flex justify-center text-white opacity-100">
+            GOLDEN INN
+          </div>
           <div className="flex justify-center pt-2 opacity-100">RESTAURANT</div>
         </div>
       </div>
@@ -55,7 +57,11 @@ const DesktopLandingV2 = (prop) => {
                     </Modal>
                   </div>
                 )}
-                {!matches.mobile && <Link to="/menu" className='font-semibold hover:text-black'>Menu</Link>}
+                {!matches.mobile && (
+                  <Link to="/menu" className="font-semibold hover:text-black">
+                    Menu
+                  </Link>
+                )}
               </Fragment>
             )}
           </Media>
