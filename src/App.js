@@ -2,7 +2,14 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ReactGA from "react-ga";
 import { Message } from "semantic-ui-react";
-import { doc, getDoc } from "firebase/firestore";
+import {
+  doc,
+  getDoc,
+  orderBy,
+  query,
+  collection,
+  getDocs,
+} from "firebase/firestore";
 
 import { db } from "./firebase";
 import NavBarComponent from "./components/Navbar/NavbarComponent";
@@ -20,6 +27,8 @@ export default function App() {
     message: "",
   });
 
+  const [isClosed, setClosed] = useState(false);
+
   useEffect(() => {
     const ref = doc(db, "messages", "bannerMessage");
 
@@ -32,32 +41,65 @@ export default function App() {
         visible,
       });
     });
+
+    const q = query(collection(db, "config"), orderBy("createdAt", "desc"));
+
+    getDocs(q).then((querySnapshot) => {
+      const [latestConfig] = querySnapshot.docs;
+
+      const data = latestConfig.data();
+
+      const { isClosed } = Config(data);
+
+      setClosed(isClosed);
+    });
   }, []);
 
   return (
     <Router style={AppStyle.backgroundColor}>
-      <div style={AppStyle.backgroundColor} className="font-advent">
-        <MenuItemContextProvider>
-          <NavBarComponent />
-          {banner.visible && (
-            <Message warning style={{ textAlign: "center", margin: "0" }}>
-              <Message.Header>{banner.title}</Message.Header>
-              <p className="font-sans">{banner.message}</p>
-            </Message>
-          )}
-          <Switch>
-            <Route exact path="/">
-              <HomepageComponent />
-            </Route>
-            <Route path="/menu">
-              <DesktopMenuComponent />
-            </Route>
-          </Switch>
-        </MenuItemContextProvider>
-        <a href="https://www.flaticon.com/free-icons/wok" title="wok icons">
-          Wok icons created by Freepik - Flaticon
-        </a>
-      </div>
+      {isClosed ? (
+        <div style={AppStyle.backgroundColor} className="font-advent">
+          <MenuItemContextProvider>
+            <NavBarComponent />
+            {banner.visible && (
+              <Message warning style={{ textAlign: "center", margin: "0" }}>
+                <Message.Header>{banner.title}</Message.Header>
+                <p className="font-sans">{banner.message}</p>
+              </Message>
+            )}
+            <Switch>
+              <Route exact path="/">
+                <HomepageComponent />
+              </Route>
+              <Route path="/menu">
+                <DesktopMenuComponent />
+              </Route>
+            </Switch>
+          </MenuItemContextProvider>
+          <a href="https://www.flaticon.com/free-icons/wok" title="wok icons">
+            Wok icons created by Freepik - Flaticon
+          </a>
+        </div>
+      ) : (
+        <div
+          style={AppStyle.backgroundColor}
+          className="h-screen justify-center flex"
+        >
+          <div className="flex flex-col justify-center">
+            <div className="text-2xl leading-loose">
+              <div className="text-center p-4 text-white m-auto">
+                WE ARE CLOSED :(
+              </div>
+              <div className="text-center p-4 text-white m-auto">
+                WE APOLOGIZE FOR ANY INCONVENIENCE.
+              </div>
+              <div className="text-center p-4 text-white m-auto">
+                HAVE A GREAT DAY!
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </Router>
   );
 }
@@ -78,3 +120,12 @@ function HomepageComponent() {
     </div>
   );
 }
+
+const Config = (params) => {
+  const data = {
+    createdAt: params.createdAt,
+    isClosed: params.isClosed,
+  };
+
+  return data;
+};
