@@ -57,7 +57,7 @@ export default function App() {
 
   return (
     <Router style={AppStyle.backgroundColor}>
-      {isClosed ? (
+      {!isClosed ? (
         <div style={AppStyle.backgroundColor} className="font-advent">
           <MenuItemContextProvider>
             <NavBarComponent />
