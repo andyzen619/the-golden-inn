@@ -27,7 +27,7 @@ export default function App() {
     message: "",
   });
 
-  const [isClosed, setClosed] = useState(false);
+  const [isClosed, setClosed] = useState(true);
 
   useEffect(() => {
     const ref = doc(db, "messages", "bannerMessage");
