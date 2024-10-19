@@ -88,7 +88,7 @@ export default function App() {
           <div className="flex flex-col justify-center">
             <div className="text-2xl leading-loose">
               <div className="text-center p-4 text-white m-auto">
-                WE ARE CLOSED :(
+                WE ARE PERMANENTLY CLOSED :(
               </div>
               <div className="text-center p-4 text-white m-auto">
                 WE APOLOGIZE FOR ANY INCONVENIENCE.
